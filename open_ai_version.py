@@ -40,4 +40,4 @@ query = "Who did Vladimir Putin meet?"
 res = qa.run(query)
 
 print(f"Q: {query}")
-print(f"A: {res}")
+print(res)
