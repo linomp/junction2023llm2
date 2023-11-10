@@ -1,11 +1,17 @@
+import os
+
+from langchain.callbacks import StreamingStdOutCallbackHandler
+from langchain.callbacks.manager import CallbackManager
 from langchain.chains import RetrievalQA
 from langchain.document_loaders import TextLoader
 from langchain.embeddings.openai import OpenAIEmbeddings
-from langchain.llms import OpenAI
+from langchain.llms import LlamaCpp
 from langchain.text_splitter import CharacterTextSplitter
 from langchain.vectorstores import Chroma
 
-loader = TextLoader("../data/state_of_the_union.txt")
+os.environ["OPENAI_API_KEY"] = "..."
+
+loader = TextLoader("./data/state_of_the_union.txt", encoding="utf-8")
 documents = loader.load()
 text_splitter = CharacterTextSplitter(chunk_size=1000, chunk_overlap=0)
 texts = text_splitter.split_documents(documents)
@@ -13,7 +19,17 @@ texts = text_splitter.split_documents(documents)
 embeddings = OpenAIEmbeddings()
 docsearch = Chroma.from_documents(texts, embeddings)
 
-qa = RetrievalQA.from_chain_type(llm=OpenAI(), chain_type="stuff", retriever=docsearch.as_retriever())
+llm = LlamaCpp(
+    model_path="./models/WizardLM-7B-uncensored.ggmlv3.q2_K.bin",
+    n_gpu_layers=1,
+    n_batch=512,
+    n_ctx=2048,
+    f16_kv=True,
+    callback_manager=CallbackManager([StreamingStdOutCallbackHandler()]),
+    verbose=True,
+)
+
+qa = RetrievalQA.from_chain_type(llm=llm, chain_type="stuff", retriever=docsearch.as_retriever())
 
 query = "What did the president say about Ketanji Brown Jackson"
 qa.run(query)
