@@ -3,9 +3,9 @@ import os
 from langchain.llms.openai import OpenAI
 
 os.environ["OPENAI_API_KEY"] = "..."
-os.environ["OPENAI_PROXY"] = "http://localhost:8080/v1/chat/completions"
+# os.environ["OPENAI_PROXY"] = "http://localhost:8080"
 
-llm = OpenAI()
+llm = OpenAI(openai_api_base="http://localhost:8080")
 llm("hello who are you")
 #
 # loader = TextLoader("./data/state_of_the_union.txt", encoding="utf-8")
