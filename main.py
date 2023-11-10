@@ -1,22 +1,20 @@
-import os
-
 from langchain.callbacks import StreamingStdOutCallbackHandler
 from langchain.callbacks.manager import CallbackManager
 from langchain.chains import RetrievalQA
 from langchain.document_loaders import TextLoader
-from langchain.embeddings.openai import OpenAIEmbeddings
+from langchain.embeddings import LlamaCppEmbeddings
 from langchain.llms import LlamaCpp
 from langchain.text_splitter import CharacterTextSplitter
 from langchain.vectorstores import Chroma
 
-os.environ["OPENAI_API_KEY"] = "..."
+model_path = "./models/WizardLM-7B-uncensored.ggmlv3.q2_K.bin"
 
 loader = TextLoader("./data/state_of_the_union.txt", encoding="utf-8")
 documents = loader.load()
 text_splitter = CharacterTextSplitter(chunk_size=1000, chunk_overlap=0)
 texts = text_splitter.split_documents(documents)
 
-embeddings = OpenAIEmbeddings()
+embeddings = LlamaCppEmbeddings(model_path=model_path)
 docsearch = Chroma.from_documents(texts, embeddings)
 
 llm = LlamaCpp(
