@@ -3,3 +3,4 @@ venv
 *.iml
 models
 *.xml
+.env
