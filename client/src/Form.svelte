@@ -1,6 +1,7 @@
 <script lang="ts">
   import { createEventDispatcher } from "svelte";
   const dispatch = createEventDispatcher();
+  export let isLoading: boolean;
 
   let textInput: string = "";
 
@@ -23,9 +24,18 @@
     />
     <button
       type="submit"
-      class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline mt-4"
+      disabled={isLoading}
+      class:opacity-50={isLoading}
+      class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline mt-4 transition ease-in-out duration-150"
     >
       Submit
     </button>
   </div>
 </form>
+
+<style>
+  /* You can define the styles for your disabled state here */
+  .opacity-50 {
+    opacity: 0.5; /* Adjust the opacity to indicate the button is disabled */
+  }
+</style>

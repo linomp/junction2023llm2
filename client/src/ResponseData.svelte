@@ -13,6 +13,8 @@
   id="response-{responseData.id}"
   class="response bg-white shadow rounded px-4 py-2 my-2"
 >
+  <p class="text-lg"><strong>Question:</strong> {responseData.question}</p>
+  <!-- Display the question here -->
   <p class="text-lg"><strong>Answer:</strong> {responseData.answer}</p>
   <p class="text-lg">
     <strong>Confidence:</strong>
