@@ -20,5 +20,8 @@
     "tslib": "^2.6.0",
     "typescript": "^5.0.2",
     "vite": "^4.4.5"
+  },
+  "dependencies": {
+    "gsap": "^3.12.2"
   }
 }
