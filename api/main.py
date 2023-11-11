@@ -44,13 +44,13 @@ async def query(query: Query):
 
 
 @app.post("/sources")
-async def addSource(source: InformationSource):
+async def add_source(source: InformationSource):
     sources.append(source)
     return source
 
 
 @app.get("/sources")
-async def getSources() -> list[InformationSource]:
+async def get_sources() -> list[InformationSource]:
     return sources
 
 

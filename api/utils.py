@@ -10,8 +10,11 @@ from api.api_models.models import InformationSource, CoreModelAnswer, Answer, Qu
 URL_MOCK_FILE_PATH = 'data/file1.txt'
 
 
-def mock_url_source_raw_content() -> str:
-    return read_file(URL_MOCK_FILE_PATH)
+def mock_url_source_raw_content(url) -> str:
+    try:
+        return read_file(url)
+    except FileNotFoundError:
+        return "EMPTY_RESOURCE"
 
 
 def read_file(path: str) -> str:
@@ -25,7 +28,8 @@ def get_mapped_sources(sources) -> list[InformationSource]:
         if source.url is None:
             mapped_sources.append(source)
         else:
-            mocked_source = InformationSource(raw_content=mock_url_source_raw_content(), url=None, title=source.title)
+            mocked_source = InformationSource(raw_content=mock_url_source_raw_content(source.url), url=source.url,
+                                              title=source.title)
             mapped_sources.append(mocked_source)
     return mapped_sources
 
@@ -50,7 +54,7 @@ def get_mocked_answer(query: Query):
                   ])
 
 
-def get_answer(sources: list[InformationSource], query) -> CoreModelAnswer:
+def get_answer(sources: list[InformationSource], query: Query) -> CoreModelAnswer:
     documents = []
     mapped_sources = get_mapped_sources(sources)
     for source in mapped_sources:
@@ -69,6 +73,6 @@ def get_answer(sources: list[InformationSource], query) -> CoreModelAnswer:
     qa = RetrievalQAWithSourcesChain.from_chain_type(llm=llm, retriever=docsearch.as_retriever(),
                                                      return_source_documents=True)
 
-    result = qa({"question": query})
+    result = qa({"question": query.question})
 
-    return CoreModelAnswer(question=query, answer=result['answer'], sources=result['sources'])
+    return CoreModelAnswer(question=query.question, answer=result['answer'], sources=result['sources'].split(","))
