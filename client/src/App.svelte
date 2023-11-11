@@ -1,9 +1,35 @@
 <script lang="ts">
-  let textInput: string = '';
+  let textInput: string = "";
 
-  const handleSubmit = () => {
-    // Handle the submission logic here
-    alert(`Submitted Text: ${textInput}`);
+  const handleSubmit = async () => {
+    try {
+      const response = await fetch("http://localhost:8000/query", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          accept: "application/json",
+        },
+        body: JSON.stringify({
+          value: textInput,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      const result = await response.json();
+      console.log(result);
+      alert(
+        `Submitted Text: ${textInput}\nResponse: ${JSON.stringify(
+          result,
+          null,
+          2
+        )}`
+      );
+    } catch (error) {
+      console.error("There was a problem with the fetch operation:", error);
+    }
   };
 </script>
 
