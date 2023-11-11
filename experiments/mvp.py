@@ -10,9 +10,7 @@ from langchain.vectorstores.chroma import Chroma
 # os.environ["OPENAI_API_KEY"] = "KEY_DOESNT_MATTER_FOR_LOCALHOST"
 # os.environ["OPENAI_API_BASE"] = "http://localhost:8080"
 
-llm = OpenAI(model_name="curie", temperature=0)
-
-loader = TextLoader("./data/state_of_the_union_full.txt", encoding="utf-8")
+loader = TextLoader("../data/state_of_the_union_full.txt", encoding="utf-8")
 documents = loader.load()
 text_splitter = CharacterTextSplitter(chunk_size=1000, chunk_overlap=0)
 texts = text_splitter.split_documents(documents)
@@ -21,7 +19,7 @@ texts = text_splitter.split_documents(documents)
 embeddings = OpenAIEmbeddings()
 docsearch = Chroma.from_documents(texts, embeddings)
 
-prompt_template = """Answer in one sentence.
+prompt_template = """Answer in one sentence. If you do not know the answer, do not try to make one up. Say you do not know.
 
 {context}
 
@@ -36,7 +34,7 @@ chain_type_kwargs = {"prompt": PROMPT}
 qa = RetrievalQA.from_chain_type(llm=OpenAI(), chain_type="stuff", retriever=docsearch.as_retriever(),
                                  chain_type_kwargs=chain_type_kwargs)
 
-query = "Who did Vladimir Putin meet?"
+query = "What set us apart last year?"
 
 res = qa.run(query)
 
