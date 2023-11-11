@@ -4,14 +4,14 @@ import uvicorn
 from dotenv import load_dotenv
 from fastapi import FastAPI
 from langchain.chains import RetrievalQA
-from langchain.document_loaders import TextLoader
 from langchain.embeddings import OpenAIEmbeddings
 from langchain.llms.openai import OpenAI
 from langchain.prompts import PromptTemplate
+from langchain.schema import Document
 from langchain.text_splitter import CharacterTextSplitter
 from langchain.vectorstores.chroma import Chroma
 from starlette.middleware.cors import CORSMiddleware
-from langchain.schema import Document
+
 from api_models.models import Query, Answer, InformationSource
 
 load_dotenv()
