@@ -21,10 +21,7 @@ app.add_middleware(
 )
 
 sources = [
-    InformationSource(raw_content="aaaaa", title="Title just an A"),
-    InformationSource(raw_content="bbbbb", title="Title just an B"),
-    InformationSource(url="hasdhashdash", title="Now a Z"),
-    InformationSource(url="data/file1.txt", title="File about Steve's location"),
+    InformationSource(url="data/reforms.txt", title="yle.fi - EU carbon market reform impacts Finnish steel industry"),
 ]
 
 
