@@ -68,6 +68,7 @@ async def query(query: Query):
     print(f"Q: {query.question}.")
     if os.environ.get("ENV", None) == "fe_dev":
         return Answer(answer="42",
+                      question=query.question,
                       confidence=0.42,
                       sources=[
                           InformationSource(url="https://www.google.com", title="Google",
@@ -107,7 +108,7 @@ async def query(query: Query):
     result_str = result['result']
     print(f"Result: {result_str}")
 
-    return Answer(answer=result_str, confidence=random.random(), sources=mapped_sources)
+    return Answer(question=query.question, answer=result_str, confidence=random.random(), sources=mapped_sources)
 
 
 @app.post("/sources")

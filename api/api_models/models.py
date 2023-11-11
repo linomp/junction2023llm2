@@ -11,6 +11,7 @@ class InformationSource(BaseModel):
 
 
 class Answer(BaseModel):
+    question: str
     answer: str
     confidence: float
     sources: list[InformationSource]
