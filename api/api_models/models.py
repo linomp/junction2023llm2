@@ -1,3 +1,4 @@
+import random
 from dataclasses import dataclass
 from typing import Optional
 
@@ -32,7 +33,7 @@ class Answer(BaseModel):
         return cls(
             question=core_model_answer.question,
             answer=core_model_answer.answer,
-            confidence=1.0,
+            confidence=random.random(),
             sources=list(
                 map(lambda s: InformationSource(title=s, raw_content=None, url=None), core_model_answer.sources))
         )
