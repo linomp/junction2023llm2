@@ -1,7 +1,8 @@
+import random
+
 import uvicorn
 from dotenv import load_dotenv
 from fastapi import FastAPI
-from starlette.middleware.cors import CORSMiddleware
 from langchain.chains import RetrievalQA
 from langchain.document_loaders import TextLoader
 from langchain.embeddings import OpenAIEmbeddings
@@ -9,9 +10,10 @@ from langchain.llms.openai import OpenAI
 from langchain.prompts import PromptTemplate
 from langchain.text_splitter import CharacterTextSplitter
 from langchain.vectorstores.chroma import Chroma
+from starlette.middleware.cors import CORSMiddleware
 
 from api_models.models import Query, Answer, InformationSource
-import random
+
 load_dotenv()
 
 app = FastAPI()
@@ -20,8 +22,8 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
     allow_credentials=True,
-    allow_methods=["*"], 
-    allow_headers=["*"],  
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 sources = [
@@ -75,4 +77,4 @@ async def getSources() -> list[InformationSource]:
 
 
 if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=8000, reload=True)
+    uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
