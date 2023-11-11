@@ -31,7 +31,7 @@
   const handleSubmit = async () => {
     responseData = null; // Clear previous response data
     try {
-      const response = await fetch("http://localhost:8000/query", {
+      const response = await fetch("http://localhost:8001/query", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -47,7 +47,7 @@
       }
 
       const newResponseData = await response.json(); // Get the new response data
-      responseDatas = [newResponseData, ...responseDatas]; // Use spread to trigger reactivity
+      responseDatas = [...responseDatas, newResponseData]; // Use spread to trigger reactivity
 
       // Wait for the next tick to ensure the element is rendered
       setTimeout(() => {
