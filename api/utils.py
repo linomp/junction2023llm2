@@ -65,7 +65,7 @@ def get_answer(sources: list[InformationSource], query: Query) -> CoreModelAnswe
     text_splitter = CharacterTextSplitter(chunk_size=1000, chunk_overlap=0)
     texts = text_splitter.split_documents(documents)
 
-    llm = OpenAI(temperature=1.5, model_name='text-davinci-003')
+    llm = OpenAI(temperature=0, model_name='text-davinci-003')
 
     embeddings = OpenAIEmbeddings()
     docsearch = Chroma.from_documents(texts, embeddings)
