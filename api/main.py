@@ -15,7 +15,7 @@ from starlette.middleware.cors import CORSMiddleware
 
 from api_models.models import Query, Answer, InformationSource
 
-URL_MOCK_FILE_PATH = '../data/file1.txt'
+URL_MOCK_FILE_PATH = 'data/file1.txt'
 
 load_dotenv()
 
@@ -36,8 +36,11 @@ sources = [
 ]
 
 
-def mock_url_source_raw_content() -> str:
-    return read_file(URL_MOCK_FILE_PATH)
+def mock_url_source_raw_content(url=None) -> str:
+    if url is None:
+        return read_file(URL_MOCK_FILE_PATH)
+
+    return read_file(url)
 
 
 def read_file(path: str) -> str:
@@ -45,14 +48,12 @@ def read_file(path: str) -> str:
         return file.read()
 
 
-def get_mapped_sources(sources) -> list[InformationSource]:
+def get_mapped_sources(sources: list[InformationSource]) -> list[InformationSource]:
     mapped_sources = []
     for source in sources:
-        if source.url is None:
-            mapped_sources.append(source)
-        else:
-            mocked_source = InformationSource(raw_content=mock_url_source_raw_content(), url=None, title=source.title)
-            mapped_sources.append(mocked_source)
+        mocked_source = InformationSource(raw_content=mock_url_source_raw_content(source.url), url=source.url,
+                                          title=source.title)
+        mapped_sources.append(mocked_source)
     return mapped_sources
 
 
@@ -78,7 +79,7 @@ async def query(query: Query):
                       ])
 
     documents = []
-    mapped_sources = get_mapped_sources(sources);
+    mapped_sources = get_mapped_sources(sources)
     print(f"Using sources: {mapped_sources}")
     for source in mapped_sources:
         documents.extend(get_text_chunks_langchain(source.raw_content))
