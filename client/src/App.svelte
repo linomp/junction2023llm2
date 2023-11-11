@@ -6,6 +6,7 @@
   let isLoading = false; // New state for loading indicator
 
   interface BackendResponse {
+    question: string;
     answer: string;
     confidence: number;
     sources: Array<{
@@ -34,6 +35,7 @@
 
     responseData = null; // Clear previous response data
     try {
+      console.log("com va", textInput);
       const response = await fetch("http://localhost:8001/query", {
         method: "POST",
         headers: {
