@@ -18,6 +18,8 @@ documents = loader.load()
 text_splitter = CharacterTextSplitter(chunk_size=1000, chunk_overlap=0)
 texts = text_splitter.split_documents(documents)
 
+llm = OpenAI(temperature= 0, model_name = 'text-davinci-003')
+
 # TODO: serialize the embeddings and/or docsearch to disk, consider pickle
 embeddings = OpenAIEmbeddings()
 docsearch = Chroma.from_documents(texts, embeddings)
@@ -34,12 +36,14 @@ PROMPT = PromptTemplate(
 )
 
 chain_type_kwargs = {"prompt": PROMPT}
-qa = RetrievalQA.from_chain_type(llm=OpenAI(), chain_type="stuff", retriever=docsearch.as_retriever(),
-                                 chain_type_kwargs=chain_type_kwargs)
+qa = RetrievalQA.from_chain_type(llm=llm, chain_type="stuff", retriever=docsearch.as_retriever(),
+                                 chain_type_kwargs=chain_type_kwargs, return_source_documents = True)
 
 query = "What set us apart last year?"
 
-res = qa.run(query)
+result = qa({"query": query})
 
 print(f"Q: {query}")
-print(res)
+print(result['result'])
+print(result['source_documents'])
+
