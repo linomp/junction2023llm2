@@ -14,6 +14,7 @@ from langchain.vectorstores.chroma import Chroma
 from starlette.middleware.cors import CORSMiddleware
 
 from api_models.models import Query, Answer, InformationSource
+
 URL_MOCK_FILE_PATH = '../data/file1.txt'
 
 load_dotenv()
@@ -34,12 +35,15 @@ sources = [
     InformationSource(url="hasdhashdash", title="Now a Z"),
 ]
 
+
 def mock_url_source_raw_content() -> str:
     return read_file(URL_MOCK_FILE_PATH)
 
+
 def read_file(path: str) -> str:
-    with open(path , 'r') as file:
+    with open(path, 'r') as file:
         return file.read()
+
 
 def get_mapped_sources(sources) -> list[InformationSource]:
     mapped_sources = []
@@ -52,10 +56,11 @@ def get_mapped_sources(sources) -> list[InformationSource]:
     return mapped_sources
 
 
-def get_text_chunks_langchain(text):
+def get_text_chunks_langchain(text: str) -> list[Document]:
     text_splitter = CharacterTextSplitter(chunk_size=500, chunk_overlap=100)
     docs = [Document(page_content=x) for x in text_splitter.split_text(text)]
     return docs
+
 
 @app.post("/query")
 async def query(query: Query):
