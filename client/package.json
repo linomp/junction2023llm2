@@ -22,6 +22,9 @@
     "vite": "^4.4.5"
   },
   "dependencies": {
-    "gsap": "^3.12.2"
+    "gsap": "^3.12.2",
+    "npm": "^10.2.3",
+    "svelte-hero-icons": "^5.0.0",
+    "svelte-material-icons": "^3.0.5"
   }
 }
