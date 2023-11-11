@@ -13,40 +13,47 @@ from langchain.vectorstores.chroma import Chroma
 
 load_dotenv()
 
-sources = ["data/file1.txt", "data/file2.txt", "data/state_of_the_union_full.txt"]
 
-documents = []
-for source in sources:
-    documents.extend(TextLoader(source, encoding="utf-8").load())
+def query_test(sources, query):
+    documents = []
+    for source in sources:
+        documents.extend(TextLoader(source, encoding="utf-8").load())
 
-text_splitter = CharacterTextSplitter(chunk_size=1000, chunk_overlap=0)
-texts = text_splitter.split_documents(documents)
+    text_splitter = CharacterTextSplitter(chunk_size=1000, chunk_overlap=0)
+    texts = text_splitter.split_documents(documents)
 
-llm = OpenAI(temperature=0, model_name='text-davinci-003')
+    llm = OpenAI(temperature=0, model_name='text-davinci-003')
 
-# TODO: serialize the embeddings and/or docsearch to disk, consider pickle
-embeddings = OpenAIEmbeddings()
-docsearch = Chroma.from_documents(texts, embeddings)
+    # TODO: serialize the embeddings and/or docsearch to disk, consider pickle
+    embeddings = OpenAIEmbeddings()
+    docsearch = Chroma.from_documents(texts, embeddings)
 
-prompt_template = """Answer in one sentence. If you do not know the answer, give a disclaimer to the user and then provide a possible answer
+    prompt_template = """Answer in one sentence. If you do not know the answer, give a disclaimer to the user and then provide a possible answer
+    
+    {context}
+    
+    Question: {question}
+    """
 
-{context}
+    PROMPT = PromptTemplate(
+        template=prompt_template, input_variables=["context", "question"]
+    )
 
-Question: {question}
-"""
+    chain_type_kwargs = {"prompt": PROMPT}
+    qa = RetrievalQA.from_chain_type(llm=llm, chain_type="stuff", retriever=docsearch.as_retriever(),
+                                     chain_type_kwargs=chain_type_kwargs, return_source_documents=True)
 
-PROMPT = PromptTemplate(
-    template=prompt_template, input_variables=["context", "question"]
-)
+    result = qa({"query": query})
 
-chain_type_kwargs = {"prompt": PROMPT}
-qa = RetrievalQA.from_chain_type(llm=llm, chain_type="stuff", retriever=docsearch.as_retriever(),
-                                 chain_type_kwargs=chain_type_kwargs, return_source_documents=True)
+    print(f"Q: {query}")
+    print(result['result'])
+    print(list(map(lambda doc: doc.metadata, result['source_documents'])))
 
-query = "Where does Olga live?"
+    return result
 
-result = qa({"query": query})
 
-print(f"Q: {query}")
-print(result['result'])
-print(list(map(lambda doc: doc.metadata, result['source_documents'])))
+if __name__ == "__main__":
+    query = "Where does Olga live?"
+    sources = ["data/file1.txt", "data/file2.txt", "data/state_of_the_union_full.txt"]
+
+    query_test(sources, query)
