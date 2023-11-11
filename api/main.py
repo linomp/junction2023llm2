@@ -40,7 +40,7 @@ def mock_url_source_raw_content(url=None) -> str:
     try:
         return read_file(url)
     except:
-        return read_file(URL_MOCK_FILE_PATH)
+        return "nothing here..."
 
 
 def read_file(path: str) -> str:
@@ -89,7 +89,7 @@ async def query(query: Query):
     embeddings = OpenAIEmbeddings()
     docsearch = Chroma.from_documents(documents, embeddings)
 
-    prompt_template = """Answer in one sentence.
+    prompt_template = """Answer in one sentence. If you do not know the answer, give a disclaimer to the user and then provide a possible answer
 
     {context}
 
