@@ -14,6 +14,7 @@ from langchain.vectorstores.chroma import Chroma
 from starlette.middleware.cors import CORSMiddleware
 
 from api_models.models import Query, Answer, InformationSource
+URL_MOCK_FILE_PATH = '../data/file1.txt'
 
 load_dotenv()
 
@@ -30,7 +31,25 @@ app.add_middleware(
 sources = [
     InformationSource(raw_content="aaaaa", title="Title just an A"),
     InformationSource(raw_content="bbbbb", title="Title just an B"),
+    InformationSource(url="hasdhashdash", title="Now a Z"),
 ]
+
+def mock_url_source_raw_content() -> str:
+    return read_file(URL_MOCK_FILE_PATH)
+
+def read_file(path: str) -> str:
+    with open(path , 'r') as file:
+        return file.read()
+
+def get_mapped_sources(sources) -> list[InformationSource]:
+    mapped_sources = []
+    for source in sources:
+        if source.url is None:
+            mapped_sources.append(source)
+        else:
+            mocked_source = InformationSource(raw_content=mock_url_source_raw_content(), url=None, title=source.title)
+            mapped_sources.append(mocked_source)
+    return mapped_sources
 
 
 def get_text_chunks_langchain(text):
@@ -38,10 +57,9 @@ def get_text_chunks_langchain(text):
     docs = [Document(page_content=x) for x in text_splitter.split_text(text)]
     return docs
 
-
 @app.post("/query")
 async def query(query: Query):
-    print(f"Q: {query.question} with sources: {sources}")
+    print(f"Q: {query.question}.")
     if os.environ.get("ENV", None) == "fe_dev":
         return Answer(answer="42",
                       confidence=0.42,
@@ -55,9 +73,10 @@ async def query(query: Query):
                       ])
 
     documents = []
-    for source in sources:
-        s = source.raw_content
-        documents.extend(get_text_chunks_langchain(s))
+    mapped_sources = get_mapped_sources(sources);
+    print(f"Using sources: {mapped_sources}")
+    for source in mapped_sources:
+        documents.extend(get_text_chunks_langchain(source.raw_content))
 
     llm = OpenAI(temperature=0, model_name='text-davinci-003')
     # TODO: serialize the embeddings and/or docsearch to disk, consider pickle
@@ -83,7 +102,7 @@ async def query(query: Query):
     result_str = result['result']
     print(f"Result: {result_str}")
 
-    return Answer(answer=result_str, confidence=random.random(), sources=sources)
+    return Answer(answer=result_str, confidence=random.random(), sources=mapped_sources)
 
 
 @app.post("/sources")
