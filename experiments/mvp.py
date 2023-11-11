@@ -1,5 +1,5 @@
 from dotenv import load_dotenv
-from langchain.chains import RetrievalQA
+from langchain.chains import RetrievalQA, RetrievalQAWithSourcesChain
 from langchain.document_loaders import TextLoader
 from langchain.embeddings import OpenAIEmbeddings
 from langchain.llms.openai import OpenAI
@@ -8,7 +8,7 @@ from langchain.schema import Document
 from langchain.text_splitter import CharacterTextSplitter
 from langchain.vectorstores.chroma import Chroma
 
-from experiments.api_models.models import InformationSource
+from experiments.api_models.models import InformationSource, CoreModelAnswer
 
 # Settings for locally hosted OpenAI-compatible models
 # os.environ["OPENAI_API_KEY"] = "KEY_DOESNT_MATTER_FOR_LOCALHOST"
@@ -77,14 +77,15 @@ def query_test(sources, query):
 def query_test_advanced(sources: list[InformationSource], query):
     documents = []
     mapped_sources = get_mapped_sources(sources)
-    print(f"Using sources: {mapped_sources}")
     for source in mapped_sources:
-        documents.extend(get_text_chunks_langchain(source.raw_content))
+        docs = get_text_chunks_langchain(source.raw_content)
+        docs = list(map(lambda d: Document(page_content=d.page_content, metadata={"source": source.title}), docs))
+        documents.extend(docs)
 
     text_splitter = CharacterTextSplitter(chunk_size=1000, chunk_overlap=0)
     texts = text_splitter.split_documents(documents)
 
-    llm = OpenAI(temperature=0, model_name='text-davinci-003')
+    llm = OpenAI(temperature=1.5, model_name='text-davinci-003')
 
     embeddings = OpenAIEmbeddings()
     docsearch = Chroma.from_documents(texts, embeddings)
@@ -100,27 +101,28 @@ def query_test_advanced(sources: list[InformationSource], query):
         template=prompt_template, input_variables=["context", "question"]
     )
 
-    chain_type_kwargs = {"prompt": PROMPT}
-    qa = RetrievalQA.from_chain_type(llm=llm, chain_type="stuff", retriever=docsearch.as_retriever(),
-                                     chain_type_kwargs=chain_type_kwargs, return_source_documents=True)
+    qa = RetrievalQAWithSourcesChain.from_chain_type(llm=llm, retriever=docsearch.as_retriever(),
+                                                     return_source_documents=True)
 
-    result = qa({"query": query})
+    result = qa({"question": query})
 
-    print(f"Q: {query}")
-    print(result['result'])
-    print(list(map(lambda doc: doc.metadata, result['source_documents'])))
-
-    return result
+    return CoreModelAnswer(question=query, answer=result['answer'], sources=result['sources'])
 
 
 if __name__ == "__main__":
-    query = "Where does Olga live?"
+    query = "Who is Steve?"
+
+    # Old basic version that received only text files
     # sources = ["data/file1.txt", "data/file2.txt", "data/state_of_the_union_full.txt"]
     # query_test(sources, query)
 
     sources = [
-        InformationSource(url="data/file1.txt", title="File 1"),
-        InformationSource(url="data/file2.txt", title="File 2")
+        InformationSource(url="data/file1.txt", title="File about Steve's location"),
+        InformationSource(url="data/file2.txt", title="File about Steve's wife"),
+        InformationSource(url="data/state_of_the_union_short.txt", title="State of the union"),
     ]
 
-    query_test_advanced(sources, query)
+    result = query_test_advanced(sources, query)
+    print(f"Q: {result.question}")
+    print(f"A: {result.answer}")
+    print(f"Sources: {result.sources}")
