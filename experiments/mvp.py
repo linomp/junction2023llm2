@@ -13,9 +13,11 @@ from langchain.vectorstores.chroma import Chroma
 
 load_dotenv()
 
-loader = TextLoader("data/state_of_the_union_full.txt", encoding="utf-8")
+loader = TextLoader("data/file1.txt", encoding="utf-8")
 documents = loader.load()
 text_splitter = CharacterTextSplitter(chunk_size=1000, chunk_overlap=0)
+documents.extend(TextLoader("data/file2.txt", encoding="utf-8").load())
+documents.extend(TextLoader("data/state_of_the_union_full.txt", encoding="utf-8").load())
 texts = text_splitter.split_documents(documents)
 
 llm = OpenAI(temperature= 0, model_name = 'text-davinci-003')
@@ -24,7 +26,7 @@ llm = OpenAI(temperature= 0, model_name = 'text-davinci-003')
 embeddings = OpenAIEmbeddings()
 docsearch = Chroma.from_documents(texts, embeddings)
 
-prompt_template = """Answer in one sentence. If you do not know the answer, do not try to make one up. Say you do not know.
+prompt_template = """Answer in one sentence. If you do not know the answer, give a disclaimer to the user and then provide a possible answer
 
 {context}
 
@@ -39,11 +41,16 @@ chain_type_kwargs = {"prompt": PROMPT}
 qa = RetrievalQA.from_chain_type(llm=llm, chain_type="stuff", retriever=docsearch.as_retriever(),
                                  chain_type_kwargs=chain_type_kwargs, return_source_documents = True)
 
-query = "What set us apart last year?"
+query = "Where does Olga live?"
 
 result = qa({"query": query})
 
 print(f"Q: {query}")
 print(result['result'])
-print(result['source_documents'])
+print(list(map(lambda doc: doc.metadata,result['source_documents'])))
+
+
+
+
+
 
