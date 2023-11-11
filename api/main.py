@@ -1,21 +1,12 @@
 import os
-import random
 
 import uvicorn
 from dotenv import load_dotenv
 from fastapi import FastAPI
-from langchain.chains import RetrievalQA
-from langchain.embeddings import OpenAIEmbeddings
-from langchain.llms.openai import OpenAI
-from langchain.prompts import PromptTemplate
-from langchain.schema import Document
-from langchain.text_splitter import CharacterTextSplitter
-from langchain.vectorstores.chroma import Chroma
 from starlette.middleware.cors import CORSMiddleware
 
-from api_models.models import Query, Answer, InformationSource
-
-URL_MOCK_FILE_PATH = 'data/file1.txt'
+from api.utils import get_mocked_answer, get_answer
+from api_models.models import Query, InformationSource, Answer
 
 load_dotenv()
 
@@ -37,78 +28,19 @@ sources = [
 ]
 
 
-def mock_url_source_raw_content() -> str:
-    return read_file(URL_MOCK_FILE_PATH)
-
-
-def read_file(path: str) -> str:
-    with open(path, 'r') as file:
-        return file.read()
-
-
-def get_mapped_sources(sources) -> list[InformationSource]:
-    mapped_sources = []
-    for source in sources:
-        if source.url is None:
-            mapped_sources.append(source)
-        else:
-            mocked_source = InformationSource(raw_content=mock_url_source_raw_content(), url=None, title=source.title)
-            mapped_sources.append(mocked_source)
-    return mapped_sources
-
-
-def get_text_chunks_langchain(text: str) -> list[Document]:
-    text_splitter = CharacterTextSplitter(chunk_size=500, chunk_overlap=100)
-    docs = [Document(page_content=x) for x in text_splitter.split_text(text)]
-    return docs
-
-
 @app.post("/query")
 async def query(query: Query):
     print(f"Q: {query.question}.")
     if os.environ.get("ENV", None) == "fe_dev":
-        return Answer(answer="42",
-                      question=query.question,
-                      confidence=0.42,
-                      sources=[
-                          InformationSource(url="https://www.google.com", title="Google",
-                                            raw_content="Last year COVID-19 kept us apart. This year we are finally together again."),
-                          InformationSource(url="https://www.wikipedia.org", title="Wikipedia",
-                                            raw_content="With a duty to one another to the American people to the Constitution.  And with an unwavering resolve that freedom will always triumph over tyranny."),
-                          InformationSource(url=None, title="custom text",
-                                            raw_content="America is moving. Moving forward. And we can't stop now.")
-                      ])
+        return get_mocked_answer(query)
 
-    documents = []
-    mapped_sources = get_mapped_sources(sources)
-    print(f"Using sources: {mapped_sources}")
-    for source in mapped_sources:
-        documents.extend(get_text_chunks_langchain(source.raw_content))
+    core_model_answer = get_answer(sources, query)
 
-    llm = OpenAI(temperature=0, model_name='text-davinci-003')
-    # TODO: serialize the embeddings and/or docsearch to disk, consider pickle
-    embeddings = OpenAIEmbeddings()
-    docsearch = Chroma.from_documents(documents, embeddings)
+    print(f"Q: {core_model_answer.question}")
+    print(f"A: {core_model_answer.answer}")
+    print(f"Sources: {core_model_answer.sources}")
 
-    prompt_template = """Answer in one sentence.
-    {context}
-
-    Question: {question}
-    """
-
-    PROMPT = PromptTemplate(
-        template=prompt_template, input_variables=["context", "question"]
-    )
-
-    chain_type_kwargs = {"prompt": PROMPT}
-    qa = RetrievalQA.from_chain_type(llm=llm, chain_type="stuff", retriever=docsearch.as_retriever(),
-                                     chain_type_kwargs=chain_type_kwargs)
-
-    result = qa({"query": query.question})
-    result_str = result['result']
-    print(f"Result: {result_str}")
-
-    return Answer(question=query.question, answer=result_str, confidence=random.random(), sources=mapped_sources)
+    return Answer.from_core_model_answer(core_model_answer)
 
 
 @app.post("/sources")
