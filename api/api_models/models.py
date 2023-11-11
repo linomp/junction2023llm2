@@ -1,3 +1,5 @@
+from typing import Union
+
 from pydantic import BaseModel
 
 
@@ -12,6 +14,6 @@ class Query(BaseModel):
 
 
 class InformationSource(BaseModel):
-    url: str | None
+    url: Union[str, None]
     title: str
-    raw_content: str | None
+    raw_content: Union[str, None]
