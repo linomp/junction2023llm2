@@ -71,7 +71,7 @@ def get_answer(sources: list[InformationSource], query: Query) -> CoreModelAnswe
     docsearch = Chroma.from_documents(texts, embeddings)
 
     qa = RetrievalQAWithSourcesChain.from_chain_type(llm=llm, retriever=docsearch.as_retriever(),
-                                                     return_source_documents=True)
+                                                     chain_type="stuff")
 
     result = qa({"question": query.question})
 
