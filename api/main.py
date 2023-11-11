@@ -2,7 +2,7 @@ import uvicorn
 from fastapi import FastAPI
 from starlette.middleware.cors import CORSMiddleware
 
-from api.models import Query, Answer, InformationSource
+from models.models import Query, Answer, InformationSource
 
 app = FastAPI()
 
@@ -20,6 +20,7 @@ app.add_middleware(
 )
 
 sources = []
+
 
 @app.post("/query")
 async def query(query: Query):
