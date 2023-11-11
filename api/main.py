@@ -33,12 +33,13 @@ sources = [
     InformationSource(raw_content="aaaaa", title="Title just an A"),
     InformationSource(raw_content="bbbbb", title="Title just an B"),
     InformationSource(url="hasdhashdash", title="Now a Z"),
+    InformationSource(url="data/file1.txt", title="File about Steve's location"),
 ]
-
 
 
 def mock_url_source_raw_content() -> str:
     return read_file(URL_MOCK_FILE_PATH)
+
 
 def read_file(path: str) -> str:
     with open(path, 'r') as file:
