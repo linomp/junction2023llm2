@@ -17,7 +17,7 @@ app.add_middleware(
 
 sources = [
     InformationSource(url="https://www.google.com", title="Google"),
-    InformationSource(url="https://www.wikipedia.org", title="Wikipedia")
+    InformationSource(url="https://www.wikipedia.org", title="State of The Union")
 ]
 
 
