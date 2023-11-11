@@ -15,7 +15,10 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-sources = ["example 1", "example 2"]
+sources = [
+    InformationSource(url="https://www.google.com", title="Google"),
+    InformationSource(url="https://www.wikipedia.org", title="Wikipedia")
+]
 
 
 @app.post("/query")
