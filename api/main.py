@@ -9,20 +9,13 @@ load_dotenv()
 
 app = FastAPI()
 
-origins = [
-    "http://localhost.tiangolo.com",
-    "https://localhost.tiangolo.com",
-    "http://localhost",
-    "http://localhost:8080",
-]
-
 app.add_middleware(
     CORSMiddleware,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
-sources = []
+sources = ["example 1", "example 2"]
 
 
 @app.post("/query")
