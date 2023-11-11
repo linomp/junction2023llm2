@@ -12,14 +12,14 @@
   const handleSubmit = async () => {
     responseData = null; // Clear previous response data
     try {
-      const response = await fetch("http://localhost:8002/query", {
+      const response = await fetch("http://localhost:8000/query", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
           accept: "application/json",
         },
         body: JSON.stringify({
-          value: textInput,
+          question: textInput,
         }),
       });
 
