@@ -36,24 +36,23 @@ sources = [
 ]
 
 
-def mock_url_source_raw_content(url=None) -> str:
-    try:
-        return read_file(url)
-    except:
-        return "nothing here..."
 
+def mock_url_source_raw_content() -> str:
+    return read_file(URL_MOCK_FILE_PATH)
 
 def read_file(path: str) -> str:
     with open(path, 'r') as file:
         return file.read()
 
 
-def get_mapped_sources(sources: list[InformationSource]) -> list[InformationSource]:
+def get_mapped_sources(sources) -> list[InformationSource]:
     mapped_sources = []
     for source in sources:
-        mocked_source = InformationSource(raw_content=mock_url_source_raw_content(source.url), url=source.url,
-                                          title=source.title)
-        mapped_sources.append(mocked_source)
+        if source.url is None:
+            mapped_sources.append(source)
+        else:
+            mocked_source = InformationSource(raw_content=mock_url_source_raw_content(), url=None, title=source.title)
+            mapped_sources.append(mocked_source)
     return mapped_sources
 
 
@@ -89,8 +88,7 @@ async def query(query: Query):
     embeddings = OpenAIEmbeddings()
     docsearch = Chroma.from_documents(documents, embeddings)
 
-    prompt_template = """Answer in one sentence. If you do not know the answer, give a disclaimer to the user and then provide a possible answer
-
+    prompt_template = """Answer in one sentence.
     {context}
 
     Question: {question}
@@ -123,4 +121,4 @@ async def getSources() -> list[InformationSource]:
 
 
 if __name__ == "__main__":
-    uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
+    uvicorn.run("main:app", host="0.0.0.0", port=8001, reload=True)
