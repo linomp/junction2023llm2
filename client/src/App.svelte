@@ -1,9 +1,18 @@
 <script lang="ts">
+  import gsap from "gsap";
+  interface BackendResponse {
+    answer: string;
+    confidence: number;
+    sources: string[];
+  }
+
   let textInput: string = "";
+  let responseData: BackendResponse | null = null; // This will hold the response data
 
   const handleSubmit = async () => {
+    responseData = null; // Clear previous response data
     try {
-      const response = await fetch("http://localhost:8000/query", {
+      const response = await fetch("http://localhost:8002/query", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -18,15 +27,7 @@
         throw new Error(`HTTP error! status: ${response.status}`);
       }
 
-      const result = await response.json();
-      console.log(result);
-      alert(
-        `Submitted Text: ${textInput}\nResponse: ${JSON.stringify(
-          result,
-          null,
-          2
-        )}`
-      );
+      responseData = await response.json(); // Store the response data
     } catch (error) {
       console.error("There was a problem with the fetch operation:", error);
     }
@@ -35,7 +36,9 @@
 
 <main class="flex justify-center items-center h-screen">
   <div class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
-    <h1 class="block text-gray-700 text-xl font-bold mb-2">Lino Maricón</h1>
+    <h1 class="block text-gray-700 text-xl font-bold mb-2">
+      Submit your query
+    </h1>
     <form on:submit|preventDefault={handleSubmit} class="mb-4">
       <input
         type="text"
@@ -50,5 +53,29 @@
         Submit
       </button>
     </form>
+    {#if responseData}
+      <div class="response">
+        <p class="text-lg"><strong>Answer:</strong> {responseData.answer}</p>
+        <p class="text-lg">
+          <strong>Confidence:</strong>
+          {responseData.confidence}
+        </p>
+        <p class="text-lg"><strong>Sources:</strong></p>
+        <ul>
+          {#each responseData.sources as source}
+            <li>{source}</li>
+          {/each}
+        </ul>
+      </div>
+    {/if}
   </div>
 </main>
+
+<style>
+  .response {
+    background-color: #f3f4f6;
+    border-radius: 8px;
+    padding: 16px;
+    margin-top: 16px;
+  }
+</style>
