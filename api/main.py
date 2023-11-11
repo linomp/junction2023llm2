@@ -27,7 +27,10 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-sources = []
+sources = [
+    InformationSource(raw_content="aaaaa", title="Title just an A"),
+    InformationSource(raw_content="bbbbb", title="Title just an B"),
+]
 
 
 def get_text_chunks_langchain(text):
@@ -38,7 +41,7 @@ def get_text_chunks_langchain(text):
 
 @app.post("/query")
 async def query(query: Query):
-    print(f"Q: {query.question}")
+    print(f"Q: {query.question} with sources: {sources}")
     if os.environ.get("ENV", None) == "fe_dev":
         return Answer(answer="42",
                       confidence=0.42,
@@ -51,9 +54,12 @@ async def query(query: Query):
                                             raw_content="America is moving. Moving forward. And we can't stop now.")
                       ])
 
-    # loader = TextLoader("../data/state_of_the_union_full.txt", encoding="utf-8")
-    documents = get_text_chunks_langchain("aaaaaaaaaaaaaaaaaaaa")
+    documents = []
+    for source in sources:
+        s = source.raw_content
+        documents.extend(get_text_chunks_langchain(s))
 
+    llm = OpenAI(temperature=0, model_name='text-davinci-003')
     # TODO: serialize the embeddings and/or docsearch to disk, consider pickle
     embeddings = OpenAIEmbeddings()
     docsearch = Chroma.from_documents(documents, embeddings)
@@ -70,13 +76,14 @@ async def query(query: Query):
     )
 
     chain_type_kwargs = {"prompt": PROMPT}
-    qa = RetrievalQA.from_chain_type(llm=OpenAI(), chain_type="stuff", retriever=docsearch.as_retriever(),
+    qa = RetrievalQA.from_chain_type(llm=llm, chain_type="stuff", retriever=docsearch.as_retriever(),
                                      chain_type_kwargs=chain_type_kwargs)
 
-    res = qa.run(query.question)
-    print(res)
+    result = qa({"query": query.question})
+    result_str = result['result']
+    print(f"Result: {result_str}")
 
-    return Answer(answer=res, confidence=random.random(), sources=sources)
+    return Answer(answer=result_str, confidence=random.random(), sources=sources)
 
 
 @app.post("/sources")
