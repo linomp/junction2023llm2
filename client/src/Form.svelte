@@ -6,7 +6,7 @@
   let textInput: string = "";
 
   function handleSubmit() {
-    dispatch("submit", { query: textInput });
+    dispatch("submit", { textInput }); // Dispatch the value of textInput to the parent
   }
 </script>
 

@@ -27,6 +27,11 @@
   // Scroll to bottom after initial mount
   onMount(scrollToBottom);
 
+  function handleFormSubmit(event) {
+    textInput = event.detail.textInput; // Update the parent's textInput with the one from the form
+    handleSubmit(); // Now call the submit handler that does the fetch
+  }
+
   // Scroll to bottom on each update (when responseDatas changes)
   afterUpdate(scrollToBottom);
 
@@ -80,7 +85,8 @@
       <!-- Loading indicator when there are no messages yet -->
     {/if}
   </div>
-  <Form on:submit={handleSubmit} {isLoading} />
+  <Form on:submit={handleFormSubmit} {isLoading} />
+  <!-- Listen for the submit event here -->
 </main>
 
 <style>
