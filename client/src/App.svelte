@@ -1,9 +1,10 @@
 <script lang="ts">
-  import gsap from "gsap";
   import { onMount, afterUpdate } from "svelte";
   import Form from "./Form.svelte";
   import ResponseData from "./ResponseData.svelte";
   let isLoading = false; // New state for loading indicator
+  import Plus from "svelte-material-icons/PlusCircle.svelte";
+  import Modal from "./Modal.svelte"; // Import your modal component
 
   interface BackendResponse {
     question: string;
@@ -18,14 +19,20 @@
   let responseDatas: BackendResponse[] = []; // This will hold the array of response data
   let textInput: string = "";
   let responseData: BackendResponse | null = null; // This will hold the response data
-  let showRawContentIndex = null; // This will hold the index of the response whose raw content should be shown
-
+  let isModalOpen = false; // State to control modal visibility
+  function addButtonClick() {
+    isModalOpen = !isModalOpen;
+  }
   const scrollToBottom = () => {
     const responsesContainer = document.querySelector(".responses-container");
     responsesContainer.scrollTop = responsesContainer.scrollHeight;
   };
   // Scroll to bottom after initial mount
   onMount(scrollToBottom);
+
+  function closeModal() {
+    isModalOpen = false; // This will reactively cause Svelte to remove the modal from the DOM
+  }
 
   function handleFormSubmit(event) {
     textInput = event.detail.textInput; // Update the parent's textInput with the one from the form
@@ -72,21 +79,24 @@
 </script>
 
 <main class="flex flex-col justify-between h-screen">
+  {#if isModalOpen}
+    <Modal {closeModal} />
+  {/if}
   <div class="responses-container flex-1 overflow-y-auto">
     {#each responseDatas as responseData, responseIndex}
       <ResponseData {responseData} />
       {#if responseIndex === responseDatas.length - 1 && isLoading}
         <div class="loading-indicator"><div class="loading-spinner" /></div>
-        <!-- Loading indicator for the latest message -->
       {/if}
     {/each}
     {#if responseDatas.length === 0 && isLoading}
       <div class="loading-indicator"><div class="loading-spinner" /></div>
-      <!-- Loading indicator when there are no messages yet -->
     {/if}
   </div>
   <Form on:submit={handleFormSubmit} {isLoading} />
-  <!-- Listen for the submit event here -->
+  <button on:click={addButtonClick} class="add-button">
+    <Plus class="h-6 w-6" />
+  </button>
 </main>
 
 <style>
@@ -116,5 +126,13 @@
     100% {
       transform: rotate(360deg);
     }
+  }
+  .add-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 1rem;
+    cursor: pointer;
+    /* Add more styling as needed */
   }
 </style>
