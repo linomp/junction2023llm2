@@ -14,6 +14,8 @@
 Server will run on port 8000, visit http://localhost:8000/docs
 
 ## Run the backend
-1. cd client
-2. npm install
-3. npm run dev
+    ```bash
+    cd client
+    npm install
+    npm run dev
+    ```
