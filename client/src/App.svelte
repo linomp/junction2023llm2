@@ -3,6 +3,7 @@
   import { onMount, afterUpdate } from "svelte";
   import Form from "./Form.svelte";
   import ResponseData from "./ResponseData.svelte";
+  let isLoading = false; // New state for loading indicator
 
   interface BackendResponse {
     answer: string;
@@ -29,6 +30,8 @@
   afterUpdate(scrollToBottom);
 
   const handleSubmit = async () => {
+    isLoading = true; // Start loading
+
     responseData = null; // Clear previous response data
     try {
       const response = await fetch("http://localhost:8001/query", {
@@ -48,22 +51,10 @@
 
       const newResponseData = await response.json(); // Get the new response data
       responseDatas = [...responseDatas, newResponseData]; // Use spread to trigger reactivity
-
-      // Wait for the next tick to ensure the element is rendered
-      setTimeout(() => {
-        // Assume newResponseData has an id property or similar to identify it
-        const element = document.getElementById(
-          `response-${newResponseData.id}`
-        );
-        gsap.from(element, {
-          duration: 0.5, // Animation duration in seconds
-          opacity: 0, // Start with an opacity of 0
-          y: 20, // Start 20 pixels below the final position
-          ease: "power2.out", // An easing function for a smooth effect
-        });
-      }, 0);
     } catch (error) {
       console.error("There was a problem with the fetch operation:", error);
+    } finally {
+      isLoading = false; // Stop loading
     }
   };
 
@@ -77,13 +68,45 @@
   <div class="responses-container flex-1 overflow-y-auto">
     {#each responseDatas as responseData, responseIndex}
       <ResponseData {responseData} />
+      {#if responseIndex === responseDatas.length - 1 && isLoading}
+        <div class="loading-indicator"><div class="loading-spinner" /></div>
+        <!-- Loading indicator for the latest message -->
+      {/if}
     {/each}
+    {#if responseDatas.length === 0 && isLoading}
+      <div class="loading-indicator"><div class="loading-spinner" /></div>
+      <!-- Loading indicator when there are no messages yet -->
+    {/if}
   </div>
-  <Form on:submit={handleSubmit} />
+  <Form on:submit={handleSubmit} {isLoading} />
 </main>
 
 <style>
   .responses-container {
     padding-top: 1rem; /* Space at the top */
+  }
+  .loading-indicator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+  }
+
+  .loading-spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border-left-color: #09f;
+    animation: spin 1s ease infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
   }
 </style>
