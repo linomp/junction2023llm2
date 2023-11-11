@@ -10,7 +10,7 @@ class Answer(BaseModel):
 
 
 class Query(BaseModel):
-    value: str
+    question: str
 
 
 class InformationSource(BaseModel):
