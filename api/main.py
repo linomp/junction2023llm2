@@ -22,6 +22,10 @@ app.add_middleware(
 
 sources = [
     InformationSource(url="data/reforms.txt", title="yle.fi - EU carbon market reform impacts Finnish steel industry"),
+    InformationSource(url="data/mining.txt",
+                      title="ScienceDirect - Europe's mining innovation trends"),
+    InformationSource(url="data/sdgs.txt",
+                      title="ScienceDirect - The innovative contribution of multinational enterprises to the Sustainable Development Goals"),
     InformationSource(url="data/digitalization.txt",
                       title="ScienceDirect- Digitalisation trends in the mining industry"),
     InformationSource(url="data/sustainability.txt",

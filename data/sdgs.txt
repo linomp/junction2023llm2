@@ -1,0 +1,384 @@
+Abstract
+
+The 2030 Agenda recognizes the role of the private sector and calls on its innovative and creative capabilities to help solve sustainable development challenges Judging by the embracement of the SDGs in sustainability reporting this call seems to resonate However the extent to which companies actually make a contribution to solving SDG challenges remains unclear
+
+This paper aims to explore this innovative contribution to the SDGs It does so by assessing the level of SDG relevant innovation by the largest multinational enterprises in the world
+
+We develop a method for the identification of SDG relevant patent applications distinguishing between green patents related to environmental themes and blue patents related to improving conditions and meeting unmet sustainable development needs In addition we explore whether the level of SDG relevant innovation is systematically associated with a number of company characteristics
+
+Our results show that large MNEs have similar levels of green patents and lower levels of blue patents compared to smaller companies Using regression analysis we find that there are regional and industryspecific differences Corporate sustainable development attributes such as Global Compact membership and sustainability reporting are less convincingly associated It can be concluded that MNEs play an important role in SDG relevant innovation but that there are tradeoffs between different SDGs Some SDG relevant innovation is not commonly associated with sustainable development
+
+This study attempts to quantify the actual effect of sustainability strategies of companies by identifying their sustainable patents and associates this to company characteristics using a new method for sustainable patent identification Moreover SDG relevant innovation is taken beyond green innovation to include the whole range of technical innovation that is related to the broad range of SDGs
+Graphical abstract
+
+Image 1
+
+    Download  Download highres image 274KB
+    Download  Download fullsize image
+
+Previous article in issue
+Next article in issue
+Keywords
+sustainabilityoriented innovation
+patents
+multinational enterprises
+SDGs
+global challenges
+sustainability reporting
+1 Introduction
+
+The 2030 Agenda is a global plan of action for sustainable development adopted by the United Nations in September 2015 United Nations 2015 The Agenda addresses the broad global challenges of climate change social inequality and environmental degradation by a global governance framework containing 17 Sustainable Development Goals SDGs with 167 targets These include ending poverty and hunger combating inequalities building peaceful just and inclusive societies protecting human rights promoting gender equality and ensuring the lasting protection of the planet and its natural resources United Nations 2015 p 3
+
+The Agenda is not exclusively addressing the governments of the UN member states It also recognizes the role that the private sector can play in realizing the goals Acknowledging their contribution to productivity inclusive economic growth and job creation the Agenda encourages businesses  to apply their creativity and innovation to solving sustainable development challenges United Nations 2015 p 25
+
+As the SDGs have been introduced only recently there is a scarcity of empirical studies on the engagement of the private sector with the SDGs Most of this research is related to nonfinancial corporate reporting which is also an explicit objective of the Agenda target 126 The share of MNEs mentioning the SDGs in their sustainability reports is still limited while the nature of the SDG disclosure appeared to be positively worded and symbolic rather than measurable and substantive Van der Waal and Thijssens 2020 SDG mentioning appeared also to be linked to institutional factors Rosati and Faria 2019 Van der Waal and Thijssens 2020 SDG related disclosure is mainly focusing at avoiding harm topics such as emission prevention Van Zanten and Van Tulder 2018 As a result prior literature cannot provide clarity on the extent to which companies really make a contribution to solving SDG challenges In particular the question of how MNEs help to solve sustainable development challenges across the broad range of SDGs has not been empirically researched In this study we suggest that the extent to which a company spends money on innovation regarding sustainable products services or processes is a more objective measure for corporate SDG involvement than the SDG information in their sustainability reports Over the years the private sector has shown much innovation related to cleaner production and ecology  driven by market demand for cleaner products increasing environmental regulations cost savings and environmental management systems Hojnik and Ruzzier 2016 However the SDGs are not limited to the environmental challenges Hence in this study we draw on the sustainabilityoriented innovation SOI literature SOI is a broader field of study including both ecoinnovation and the often overlooked social dimension Adams et al 2016 Klewitz and Hansen 2014 and spans the entire range of SDGs As empirical literature shows that MNEs engagement in SOI is scarcely researched the aim of this study is to explore the extent to which MNEs engage in SOI More specifically we aim to explore SOI that is relevant to the SDGs which we label SDG relevant innovation in the context of this study
+
+With this aim in mind we explore the level of SDG relevant technical innovation for a sample of the 2000 largest stock listed MNEs worldwide We measure SDG relevant innovation by developing a framework for the identification of SDG relevant patent applications from the European Patent database The framework is based on SOI and distinguishes between green patents and blue patents Green patents refer to cleaner production and ecoefficiency while blue patents relate to unmet sustainable development needs such as reducing poverty zero hunger health and wellbeing education biodiversity water and sanitation To identify sustainable patents a dedicated thesaurus was developed with technical keywords derived from the source texts of the 2030 Agenda SDGs targets and indicators To further explore MNEs engagement the level of SDG relevant innovation is analyzed for potential systematic associations with a number of company characteristics
+
+The results show that large MNEs have similar levels of green patents and lower levels of blue patents compared to smaller companies Using regression analysis we find that there are regional and industryspecific differences in the level of SDG relevant innovation as well as differences associated with sustainability reporting and sustainability membership attributes Global Compact
+
+The value of this study is that it provides insight in the SDG relevant technical innovation by MNEs while contrasting it with sustainability disclosure provides more insight in the strategic coherence between the two themes and the substance of the latter
+
+In what follows we first present an outline of the state of relevant literature followed by a detailed explanation of the method developed and applied section 3 The results are presented and discussed in section 4 and conclusions formulated in section 5
+2 Literature review
+21 Corporate engagement with the SDGs
+
+The SDGs are quickly taken up by the business sector as an initiative that is important for their strategy interaction with society and corporate communication A majority of large companies mention the SDGs in their reporting publications Scott and McGill 2019 However their inclusion in published business strategy is much less frequent not to speak of measuring performance against SDG targets Scott and McGill 2019 Academic interest in private sector SDG engagement so far has been fragmented ranging from critical discussion of the role of business Scheyvens et al 2016 studying the role of business networks in corporate adoption of the SDGs Williams et al 2019 the development of frameworks for integration of SDGs into strategy Muff et al 2017 and to reviewing SDG related business models Raith and Siebold 2018 Empirical research on corporate engagement with the SDGs is scarce and has been directed at gauging corporate SDG priorities Ike et al 2019 Van Zanten and Van Tulder 2018 and assessing the relation between the SDGs and sustainability reporting GarcaSnchez et al 2020a found that institutional investor ownership positively influenced the amount of disclosure related to the 2030 Agenda by corporations while paradoxically SDG relevant disclosure was also found to prompt sell recommendations by analysts apparently considering SDG engagement as an agency cost not in the interest of shareholders GarcaSnchez et al 2020b Another research strand focused on the relationship of SDG reporting and organizational factors such as company size Global Compact membership board composition and institutional factors such as country of origin and industry It was also found that SDG reporting barely surpassed a symbolic level eg by a simple mentioning of the SDGs Rosati and Faria 2019 Van der Waal and Thijssens 2020
+
+Apart from the previous empirical work explicitly covering the private sector contribution across the full range of SDGs is largely absent Other empirical work is limited to some studies focusing on private sector contribution to specific SDGs eg Goal 3 Good Health and Wellbeing Haywood and Wright 2019 or to studies addressing the broader question of private sector contribution to sustainable development which theme predated the SDGs and has received considerable scholarly attention Burritt et al 2020 Kolk and van Tulder 2010
+
+Yet the 2030 Agendas explicit call on the private sector expresses a belief in an active role for companies to use resources and capabilities to help solve sustainable development issues Hence knowledge of whether this belief corresponds with the extent to which enterprises actually take on this active role is needed The actual innovation efforts of enterprises relating to sustainability may form a more appropriate measure expressing this role due to the required substantial investments than lesscommittal activities such as reporting Moreover innovation efforts can be quantified by RD expenditure or intellectual property rights The theme lends itself well to making SDG engagement visible However since private sector contribution to the SDGs is a young research field the innovative role has not yet been explicitly linked to the SDGs Therefore we review the state of innovation literature related to sustainability in the next section
+22 Sustainabilityoriented innovation
+
+There is a stream of literature on sustainabilityoriented innovation SOI which includes both the environmental and social aspects of sustainability covered by the SDGs Adams et al 2016 Of these two the environmental aspect is the most directly actionable in business contexts driven by market demand for cleaner products increasing environmental regulations and cost savings and therefore dominant in a broad stream of literature on industrial ecology Sullivan et al 2018 and corporate ecoinnovation He et al 2018 Klewitz and Hansen 2014 Kuo and Smith 2018 Salim et al 2019 Responsible innovation adds to this a governance and responsibility aspect Voegtlin and Scherer 2017 In this study we approach corporate innovation relevant the SDGs from the broad scope of SOI explicitly not restricted to environmental or green innovation
+
+There is no consensus about what sustainability exactly means how it can be achieved and what kinds of innovation can be called sustainable Different terms and definitions are used when relating innovation to sustainability with sustainable innovation and SOI being found most frequently Both terms can refer to innovations in which the renewal or improvement of products services technological or organizational processes not only delivers an improved economic performance but also an enhanced environmental and social performance both in the short and long term and have the capacity to generate positive social and environmental impacts BosBrouwers 2010
+
+Like sustainability SOI has multiple dimensions First operational optimization concerns doing more with less and relates to regulatory compliance ecoefficiency and greening Second organizational transformation concerns doing good by doing new things going beyond greening Lastly systems building is focused at doing good by doing new things with others emphasizing collaborative innovative efforts Adams et al 2016
+
+Discussing responsible innovation Voegtlin and Scherer 2017 distinguish between innovations that avoid harming people and the planet and innovations that improve conditions for people and the planet and connect these to the social and environmental SDGs They also point at the dual effect of an innovation beneficial for one sustainability aspect but harmful for another This notion is also relevant in connection with the SDGs where fostering one goal may have adverse impacts on another goal and thus require nexusbased governance governance that enables cobenefits and reduces tradeoffs van Zanten and van Tulder 2020
+
+The concepts of green eco or ecological and environmental innovation are not always well defined They overlap and are often used interchangeably but are nevertheless the more widely studied dimension of SOI DazGarca et al 2015 He et al 2018
+
+Compared to this green avoiding harm dimension the improve conditions or social dimension is underexposed Khan 2016 Schiederig et al 2012 Our own exploratory literature review confirms this picture Fig 1 shows the number of peerreviewed articles in the EBSCO database between 2015 and 2020 that had one or more topical keywords in the titles It is clear that the green topics are dominant and that the connection with SDG s has hardly been made
+Fig 1
+
+    Download  Download highres image 275KB
+    Download  Download fullsize image
+
+Fig 1 Article counts of literature search strings in titles TI and abstracts AB of peerreviewed articles in EBSCO database between 2015 and 2020 log scale
+
+Making the connection with the SDGs is relatively straightforward for the literature based on green innovation For example Walz et al 2017 relate green innovation like energy efficiency and waste management to specific relevant SDGs
+
+However the SDGs embody sustainability in the broad sense and also include societyfocused unmet needs or improving conditions themes such as eradicating poverty and hunger drinking water and sanitation
+
+Various aspects of SOI and particularly green innovation have been studied in relation to enterprises such as the drivers for innovation Hojnik and Ruzzier 2016 the impact of green innovation on financial performance Lin et al 2019 and organizational capabilities related to SOI Salim et al 2019 However SOI by MNEs related to the broad range of SDGs has hardly been studied empirically A few studies have focused mostly on the green dimension such as lowcarbon technologies Albino et al 2014 climatechange DurnRomero and UrracaRuiz 2015 or resourceefficiency Slowak and Regenfelder 2017 Studies connecting innovation to all dimensions of SOI and connecting these across the width of the SDGs are even scarcer One of the few examples is a study of the SDG contribution of the European mining sector by Endl et al 2019
+
+There is a clear lack of knowledge of the innovative contribution of MNEs across the full range of SDGs The current study aspires to fill this void The central research question relates to the extent to which MNEs contribute across the full width of SDGs by means of SOI that is To what extent do MNEs engage in SDG relevant innovations Questions arising from this are
+
+    a
+
+    how is SOI distributed over the SDGs
+    b
+
+    what characteristics of MNEs are systematically associated with SDG relevant innovation
+
+In the next section we will elaborate on the methodological choices that were made in order to answer the above research questions
+3 Methodology and data collection
+31 Research methodology
+
+We approach the research question by exploring SDG relevant innovation of large MNEs using a novel method based on content analysis of patents Next to a descriptive statistics exploration we also explore whether differences in SDGrelated SOI are systematically associated with company specific factors such as size industry the level of sustainability reporting and country using exploratory multivariate regression analysis Although it may seem as if we suggest a causal relationship between SOI the dependent variable in the regression model and a number of company specific factors which are treated as independent variables this is not what we intend Regression analysis is chosen only to allow for multivariate analysis between a large number of factors
+
+Patent texts are not constructed as a communication tool for conveying sustainability information to stakeholders This makes them an interesting and objective source of information giving insight in the sustainability policy outcomes of applicants It allows a look behind the organizational faade Abrahamson and Baumard 2009
+
+First we develop therefore a method to identify sustainable patents connected to the SDGs which we call SDG relevant patents Secondly the resulting data are described with reference to industry groups and geographic region Thirdly sustainability reporting characteristics including SDG mentioning and control data are collected Finally associations between green and blue SDG relevant patents as dependent variables and company characteristics as independent variables are explored though without implying any causal relationships
+32 Sample
+
+The sample contains companies on the Forbes Global 2000 list edition 2017 Given the large size of the companies virtually all companies in the list are MNEs As our SOImeasure is based on patents nontechnologydriven sectors GICS sectors 30 Consumer Staples 40 Financials and 60 Real Estate are excluded In this way 1178 companies were retained
+33 The dependent variable Identifying SDG relevant patents
+
+Patent are legaltechnical texts describing the technical novelty of inventions to patent offices They are frequently used to measure green innovation Pianta and Archibugi 1996 Patents have a title keywords an abstract a description and technical claims and are classified according to the technical field of the invention using the International Patent Classification IPC To identify green patents the OECD has developed a list of environmental technology related IPC codes Hai and Migotto 2015 The World Intellectual Property Organization WIPO has developed a similar inventory Fujii and Managi 2016 These sets have been used to study various aspects of green innovation such as policy and networks Fabrizi et al 2018 the effect of corporate governance Amore and Bennedsen 2016 and the relation with environmental disclosure Radu and Francoeur 2017 However using IPC codes is a rather coarsemeshed method because they refer to singular classes of technologies not to applications for use or reasons for development The green IPCs do not cover improved conditions and social sustainability This is also almost impossible with IPC codes because the technical field of such inventions may not be directly related to the problem they intend to solve such as mobile information technology inventions applied to propoor rural banking IPC patent classifications cannot comprehensively cover all of the SDGs
+
+We therefore envisaged to identify application or relevance rather than technology Analogous to Xie and Miyazaki 2013 we compiled a thesaurus of SDG innovation related keywords allowing to search for SDG related applications advantages and relevance in patent texts The constitutive documents of the 2030 Agenda serve as basis The UN Resolution United Nations 2015 and the Global Indicator Framework annex United Nations 2017 Every single target was marked to relate to environmental or other sustainability aspects if they contained technical aspects Environmental targets were labeled green and nonenvironmental targets social unmet needs improve conditions blue1 Strings of technical keywords were coded that would be specific enough to match with patent descriptions Some wider nontechnical concepts in the texts were converted into narrower technical keywords more probable to appear in patent vocabulary For example the keyword neglected tropical diseases NTDs was broken down into specific diseases mentioned on the WHO NTD list2 The keyword malnutrition was broken down into undernourishment micronutrient deficiency and obesity
+
+Keyword strings were chosen and tested carefully to avoid type I missing relevant patents or type II errors including irrelevant patents Xie and Miyazaki 2013 Two lists green and blue of keywords ensued from this exercise A few keywords appeared in both lists but appeared in different SDGs eg climate change SDG 13 which is also connected to poverty SDG1 Patents sporting one or more lists of keywords in their description fields where the technical problem or reason for the invention and its broader relevance is described were designated as SDG relevant patents The keywords are listed in the supplementary material
+
+The European Patent Database was selected as source3 It is the most international database with a wide subject range Kim and Lee 2015 and it is fulltext searchable It contains only European Patents but applicants have a global origin As long as Europe is a relevant market for applicants they are likely to apply for a European Patent We assume that Europe is a relevant market for most of the MNEs in the sample If this introduces a certain bias towards European companies this is reduced because SDG relevant patent counts are related to total patent counts per company
+
+We included patent applications from 2007 to 2017 in order to have sufficiently significant counts Hence our dependent variable reflects a companys track record regarding SDGrelevant SOI Companies may own patents by foreign subsidiaries with a different name eg General Motors owning European patents through its Opel subsidiary These were included under the parent as much as possible For every company in the sample the total number of European Patent applications was obtained Applying the keyword list to this number gave the number of green and blue patents For comparison the count of WIPO Green patents was also obtained
+
+Companies were clustered into four regions USA Europe JapanKoreaTaiwan JKT representing the triadic markets and patent families plus a group of Other countries
+
+The average patent counts per region were different To reduce the risk of bias the patent counts were normalized by dividing them by the regional average according to
+
+The dependent variables are the normalized Green and Blue Patent Counts GPnBPn
+34 The independent variables
+
+A number of MNE characteristics were taken as the independent variables Company size as an important control variable was proxied by the logarithm of the market value Dang et al 2018 The industry groupings were based on the Global Industry Classification System levels 1  Sector  and 2  Industry Group The market values and industry groupings were taken from the Forbes list
+
+The sustainability performance is derived from the RobecoSAM RobecoSam 2018 corporate sustainability assessment rankings on which the Dow Jones Sustainability Index DJSI is based It is one of the most wellknown and trusted indicators of the Environmental Social and Governance ESG performance of large companies Hawn et al 2018
+
+Corporate sustainability reporting is an important phenomenon that reflects how MNEs voluntarily selfreport their ESG impact Of every MNE we assessed if the company published a sustainability report SR in 2017 If SR is important for an MNE we expect more attention is devoted to it by using a reporting framework such as the Global Reporting Initiative GRI or IR integrated reporting applying external assurance and mentioning the SDGs in the report SR data were retrieved from corporateregistercom
+
+accessed February 2018 SDG mentioning was determined by contentanalyzing the individual reports All reporting variables are dummy variables
+
+The Global Compact GC is the most important global corporate sustainability initiative connecting the corporate sector to the United Nations PerezBatres et al 2011 By signing up to the GC a corporation pledges to follow the GC principles for sustainable development The GC actively promotes the SDGs among the corporate sector For every company membership of the GC was recorded
+
+All dependent and independent variables are presented in Table 1a The descriptive statistics of count and continuous variables are shown in Table 1b
+
+Table 1a Variables of the regression models
+Group	Dependent variables	Data type	Description
+INNOVATION	GP	count	number of green environmental patents per company n subscript denotes normalized count
+	BP	count	number of blue unmet needs patents per company n subscript denotes normalized count
+	AP	count	number of all patents n subscript denotes normalized count
+	WP	count	Number of WIPO Green Inventory patents per company
+	pGreen		percentage green patentstotal patents
+	pBlue		percentage blue patentstotal patents
+Group	Independent variables	Data type	Description
+COMPANY	size	continuous	logarithm of the market value
+
+SUSTAINABILITY	report	binary	1 if publishing sustainability or integrated report SR
+DISCLOSURE	GRI	binary	1 if GRI applied to SR
+	IR	binary	1 if IR applied to SR
+	assurance	binary	1 if thirdparty assurance of SR
+	SDG	binary	1 if SDGs mentioned in SR
+
+MEMBER	Global Compact	binary	1 if UN Global Compact membership
+	ranking	ordinal	environmentalsocialgovernance rating ESG based on RobecoSAM yearbook levels Gold  4 Silver  3 Bronze  2 yearbook listing  1 no listing  0
+REGION	region	categorical	geographic region of the company USA Europe JapanKoreaTaiwan JKT Other
+INDUSTRY	industry	categorical	GICS level 1  sector level 2 industry group of the company
+
+Table 1b Descriptive statistics of count and continuous variables
+Statistic	AP	GP	BP	APn	GPn	BPn	Size
+number	1165	1165	1165	1165	1165	1165	1168
+mean	7404	36	27	1013	45	35	1018
+median	10	0	0	20	0	0	1013
+minimum	0	0	0	0	0	0	870
+maximum	34962	17970	1764	117685	2847	3071	1188
+skewness	713	775	831	1707	814	1104	040
+kurtosis	7288	7578	10150	41446	9318	18455	384
+35 Statistical model
+
+The histogram in Fig 2 shows that the distribution of patent counts is strongly rightskewed and longtailed as is often the case with count data Table 2b confirms this by showing the distribution statistics of the variables A large proportion of companies 368 does not have any patents which zeroinflates the data To analyze count data with overdispersion a negative binomial regression generalized linear model GLM is preferred over a Poisson regression Coxe et al 2009 OHara and Kotze 2010 Negative binomial regression models are frequently applied to patent data Guo and Trivedi 2002
+Fig 2
+
+    Download  Download highres image 163KB
+    Download  Download fullsize image
+
+Fig 2 Histogram of number of MNE companies against their number of European patents in the sample between 2007 and 2017 xaxis square root scale
+
+Table 2a Descriptive statistics European Patent counts and percentages of the sample and wider universe
+counts	AP	GP	BP	WP
+total 20072017 universe	2333309 100	125254 54	158038 68	128861 55
+Forbes Global 2000 enterprises	793388 100	42279 53	31325 39	46045 58
+Forbes Global 2000 enterprises as  of total universe	340	338	198	357
+
+Table 2b Descriptive statistics Breakdown of patents per geographic region
+Empty Cell	European Patent Applications	Sustainability report	Empty Cell
+geographic region	 companies	average 1AP	 GP	 BP	 WP	 reports	 GRI4	 IIRC	 assurance	 SDG	 Global Compact
+USA	352	631	41	35	40	563	307	03	57	145	134
+Europe	257	1168	33	39	63	829	494	82	350	424	591
+JKT	222	1425	69	34	69	707	371	72	333	446	365
+Other	350	70	43	29	43	531	306	34	160	171	231
+total	1181	731	49	36	59	638	359	42	203	270	306
+
+1
+
+    Average number of patents per company
+
+To compare sustainable innovation to corporate characteristics we employ two models
+
+Model 1 only includes the companies with patents in the sample as companies without patents will not have sustainable patents A total of 747 observations remain
+
+    Regression model 1
+
+GPnBPn  fAPn  Sustainability Reporting  Global Compact  Ranking  Region  Industry  Size  Constant
+
+Model 2 focuses on companies with patents and a sustainability report to review if high SDG relevant innovation is also associated to sustainability reporting SR characteristics The sample with patents and SR contains 550 observations
+
+    Regression model 2
+
+GPnBPn  fAPn  GRI  IR  Assurance  SDG  Ranking  GC  Region  Industry Group  Size  Constant
+
+In both models the APn term is included expressing GPnBPn relative to the total patent APn counts reducing regional bias in absolute counts
+
+Additionally a logistic regression model was tested for the reverse association between factor variables Global Compact GC Sustainability Report SR GRI and IR frameworks assurance ASS and SDG mentioning and SDG relevant innovation expressed as the percentage green and blue innovation pGreen pBlue The model takes the form
+
+    Regression Model 3
+
+Probability GC  SR  GRI  IR  ASS  SDG  fpGreen  pBlue  Ranking  Region  Industry  Size  Constant
+
+The first two factors variables GC and SR are run on the sample with patents the last four on the sample with patents and an SR The goodnessoffit of the models was tested by inspecting residual plots showing approximately normally distributed residuals For all models variance inflation factors vif were computed to avoid coefficient instability in case of multicollinearity They were all well below 3 so that no such problem was expected
+4 Results and discussion
+41 Innovation across the SDGs
+
+The keyword search for individual SDGs was performed jointly for all companies in the sample Fig 3 shows how SDG relevant patents are distributed over the SDGs For every SDG the number of green and blue patents is shown with the most frequently appearing keyword This gives an idea of the nature of the innovations related to specific SDGs The figure shows that SDG relevant technical innovation is not limited to environmental green innovation but that it connects with almost all SDGs to different degrees
+Fig 3
+
+    Download  Download highres image 464KB
+    Download  Download fullsize image
+
+Fig 3 SDG relevant patent counts per SDG
+
+Goals 2 and 3 show high scores on blue innovation The most salient keyword in the patents related to SDG 2 Zero Hunger is obesity This may seem contradictory but SDG 2 includes malnutrition Target 22 and the socalled triple burden of malnutrition consists of undernourishment micronutrient deficiency and obesity PinstrupAnderson 2007 The most poignant SDG 3 keyword is cancer which is a keyword of Target 34 along with other major diseases such as AIDS tuberculosis malaria and neglected tropical diseases NTDs Not all these keywords are intuitively associated with sustainability or sustainable development They do appear prominently because the SDGs are based on a broad integrated and universal concept of sustainability covering both ecological and human aspects in both developed and emerging economies This clearly favors innovations primarily aimed at commercially attractive developed markets where SDG 3 targets are already more advanced
+
+MNEs do make innovative contributions aimed at combating NTDs such as malaria and tuberculosis Such innovations that benefit the least developed countries should in fact weigh more heavily in the appreciation of the contribution of MNEs to the SDGs than medicines against diseases of affluence even though these are explicitly mentioned in the 2030 Agenda and also increasingly affecting developing countries
+
+The previous illustrates a paradox inherent in the SDGs some corporate actions are clearly SDG relevant yet are not necessarily beneficial for overall sustainable development Whether an innovation ultimately furthers sustainable development is contingent upon its specific context and its potential adverse impacts on other goals or even targets within the same goal
+42 SDG relevant innovation across geographic regions and industry groups
+
+Table 2a shows the breakdown of sustainable patents of sample MNEs and the total universe in the studied time frame The 1181 companies in the sample own almost 08 million of a total of over 23 million patent applications SDG relevant patents comprise only a small portion 122 of all patents The counts for green patents 54 and WIPO green patents 55 are comparable Companies in the sample have similar proportions 53 of green patents as the total universe making them proportional contributors to green innovation For blue innovation their share is lower 39 vs 68 making them less than proportional contributors to innovation for improving social conditions Apparently smaller companies play a more important role in such innovation and can play an important role in solving SDG grand challenges Klewitz and Hansen 2014
+
+Table 2b is a comprehensive view of the composition of the triadic region groups US companies have a lower average number of patents An explanation may be that some US companies have a stronger focus on domestic or other nonEuropean markets Rugman and Verbeke 2008 JKT companies on the other hand have a high average number of patents even higher than European companies which may correspond to their strong export orientation Criscuolo 2005 The table also lists the percentages of companies that have sustainability reports with related attributes It is noticeable that for US companies Global Compact membership publishing sustainability reports and mentioning the SDGs are less popular
+
+Fig 4 shows the average number of total green and blue patents per industry group Fig 5 shows boxplots of the total number of patents per industry group with the number of MNEs in the group The dots show that some MNEs have patent counts that are much higher than the median and these outliers influence the means of Fig 4 The Figure shows also that some industry groups have but a few members Fig 6 shows the percentages of green and blue patens per industry group Together they give an impression of the absolute and relative contributions of the industry groups to SDG relevant innovation as well as the distribution within the industry groups
+Fig 4
+
+    Download  Download highres image 403KB
+    Download  Download fullsize image
+
+Fig 4 Average number of green blue and all patents per industry For interpretation of the references to colour in this figure legend the reader is referred to the Web version of this article
+Fig 5
+
+    Download  Download highres image 175KB
+    Download  Download fullsize image
+
+Fig 5 Boxplot of total patents per industry group The figure shows the number of companies in the industry group
+Fig 6
+
+    Download  Download highres image 474KB
+    Download  Download fullsize image
+
+Fig 6 Percentual green blue and other patents per industry group For interpretation of the references to colour in this figure legend the reader is referred to the Web version of this article
+43 SDG relevant innovation and individual company characteristics
+
+Table 3 shows the correlation matrix for the main regression variables The real patent counts correlate strongly with the normalized counts because a linear transformation by region was applied The WIPO Green count WP correlates well with the GP count which supports the validity of the GP count method Otherwise no strong univariate correlations are revealed between the patent counts and other company characteristics
+
+Table 3 Pearson pairwise correlation matrix
+Empty Cell	APn	GPn	BPn	AP	GP	BP	WP	size	ranking	report	GRI	IR	assurance	SDG	GC
+APn	1
+GPn	067	1
+BPn	072	046	1
+AP	058	060	039	1
+GP	040	076	028	076	1
+BP	030	032	069	054	044	1
+WP	067	058	020	080	071	025	1
+size	020	022	024	029	019	028	016	1
+ranking			011	018	011	021	012	016	1
+report			009	015	011	014	007	018	022	1
+GRI	009	009	009	014	012	011	009	014	024	056	1
+IR									019	016	014	1
+assurance	010	009	008	015	012	010	009	008	031	038	051	024	1
+SDG	009	015	012	023	022	022	014	015	033	046	048	023	048	1
+GC	012	014	013	019	017	017	013	014	034	035	035	021	038	047	1
+
+Only figures significant at 001 level are displayed N  1165 The region and industry group dummies have been omitted as they are not mutually associated
+
+Table 4 shows the results of the multivariate regression models Residual plots indicated reasonable goodnessoffit
+
+Table 4 Regression results of normalized Green and Blue patent counts negative binomial GLM
+Empty Cell	Model 1	Empty Cell	Model 1	Empty Cell	Model2	Empty Cell	Model2	Empty Cell
+	Green		Blue		Green		Blue
+	Estimate		Estimate		Estimate		Estimate
+Intercept	114		371		018		347
+Total patent count log APn	109		114		104		113
+Sustainability Report	015		011
+ GRI					016		014
+ IR					014		015
+ Assurance					036		044
+ SDG					032		017
+Global Compact	016		020		010		019
+Ranking	000		001		001		001
+Region
+ USA	000		000		000		000
+ Europe	002		009		020		000
+ JapanKoreaTaiwan	053		078		028		071
+ Other	005		011		040		031
+Industry
+ Energy	000		000		000		000
+ Materials	069		071		091		071
+ Capital Goods	105		129		116		138
+ Commercial  Professional Services	240		256		227		240
+ Transportation	176		173		220		197
+ Automobiles  Components	136		195		169		195
+ Consumer Durables  Apparel	112		107		126		105
+ Retailing	269		184		3616		3322
+ Food Beverage  Tobacco	121		022		134		030
+ Household  Personal Products	139		042		161		050
+ Health Care Equipment  Services	153		049		175		041
+ Pharmaceuticals Biotechnology  Life Sciences	236		162		236		155
+ Software  Services	160		126		143		104
+ Technology Hardware  Equipment	212		125		269		170
+ Semiconductors  Semiconductor Equipment	189		235		192		249
+ Telecommunication Services	184		063		242		113
+ Utilities	003		016		033		010
+Size	006		001		008		002
+McFadden r2	032		036		033		036
+null deviance degrees of freedom	309005	746	316913	746	244007	549	242666	549
+residual deviance degrees of freedom	75268	722	70451	722	56001	522	52874	522
+ n		747		747		555		555
+
+Significance codes p  0001  p  001  p  005
+
+As expected SDG relevant patent counts are associated with the number of total patents There is no significant association of green patents with sustainability reporting ranking or Global Compact That leaves the explanation of variance in SDG relevant innovation to geographical and industry differences and other unobserved variables
+
+No differences in the relative number of SDG relevant patents between the USA and Europe are visible However the EastAsian JKT group is significantly more active with green and blue innovation This is an interesting outcome A similar observation was made for SDG mentioning in sustainability reporting Van der Waal and Thijssens 2020 The explanation of the phenomenon is not clear It may have to do with the specific corporate group and lending structure of Japanese and Korean firms in which large banks play a major role Li et al 2018 Other authors connect differences in sustainable innovation orientation to the strength of stakeholder engagement and knowledge management Ayuso et al 2011 and cultural factors Ho and Taylor 2007
+
+The multivariate analysis confirms the strong differences exhibited by the industry sectors The coefficients are all relative to the Energy sector and this is the sector with the relatively highest count of green patents Other important green innovation contributions come from environmentally sensitive industries such as Materials and Automobiles and Components explainable by the large environmental footprint of their products Nevertheless their percentage of green patents is still small For the Automobiles industry this is remarkable because the quest for more sustainable automotive technology has intensified especially after the Dieselgate scandal Held et al 2018
+
+Semiconductors show the highest patent average followed by Commercial  Professional Services which contains xerographic companies The Pharmaceutical group has the highest mean of blue patents This is perhaps no surprise as the pharmaceutical industry provides many important products to society that improve or even save lives Some pharmaceutical companies see the SDGs clearly as an inspiration for sustainable business Pedersen 2018 or have participated in their formulation Schramade 2017 However the industry also has chemical pollution and product stewardship risks when drugs are disposed in sewage systems Kumar et al 2019 and faces criticism concerning access to medicines Hogerzeil 2013 As discussed in section 41 the pharmaceutical industry is strongly related to SDG 3
+
+The Utilities group being a technology user rather than developer has only few patents but if it develops technology it pays much attention to green innovation
+
+After Pharma the Food Beverage  Tobacco industry scores highest on blue innovations related to better nutrition and hygiene
+
+The Materials group which includes chemicals has medium averages of patents but scores relatively high on green patents This can be ascribed to plant protection products and other agrochemicals connected to SDG 2 Zero Hunger This uncovers an internal tension with other SDGs relating to biodiversity such as SDGs 14 Life on Land and SDG 15 Life Below water
+
+Some industries stand out with large negative signs These are sectors with low patent counts anyway showing low technology intensity
+
+Model 1 in Table 3 indicates that there is no association of SDG related innovation with sustainability reporting The voluntary disclosure practice as an externally oriented corporate activity seems to be disconnected from the internally oriented innovation strategy Other drivers derived from stakeholder theory are known to be important Hahn and Khnen 2013 and these are not included in this model When companies do publish a sustainability report however Model 2 aims to show if there are any associations with some attributes of sustainability reporting
+
+Global Compact membership is sometimes associated with just providing a better image or financial gains to members Arevalo et al 2013 Coulmont and Berthelot 2015 also called bluewashing Berliner and Prakash 2015 In the correlation matrix of Table 3 there is a weak positive correlation between Global Compact membership and patent counts The regression shows a small significant association of blue patent counts with GC membership suggesting that it may be associated with organizational processes such as innovation more than just superficially in line with its intention to be an initiative for learning and networking Ruggie 2001
+
+The DJSI ranking does not seem to be associated to SDG related innovation This corresponds to earlier findings that DJSI members do not show higher innovation Gallegolvarez et al 2011 Sustainable innovation is not an item in the corresponding sustainability assessment SP Global 2020 but this could be an element to be considered in the future
+
+Model 2 considers SDG relevant innovation limiting the sample to companies that publish an SR even though Model 1 shows that reporting is not associated with SDG relevant innovation GRI and IR framework application do not seem to be relevant in the sample For IR this is more remarkable because integrated reporting aspires to improve the integration and congruence of shareholder and nonfinancial stakeholder information and in this way break down organizational faades Perego et al 2016 External assurance however seems to be strongly associated to higher blue and green SDG relevant patent scores It is unclear how this can be explained SDG mentioning has an association with green innovation This is an interesting result and gives the impression that companies mentioning the SDGs may engage more substantially with them than previously thought as far as sustainable technical innovation is concerned Van der Waal and Thijssens 2020 Companies themselves may not even be sufficiently aware of this as SDG relevant innovation is not a topic currently included in reporting guidelines Table 5 presents the Model 3 logit regressions on the factor variables mentioned above to confirm if theses associations also appear when the direction of the association is reversed It confirms the associations found
+
+Table 5 Regression results sustainability report characteristics logit
+Model 3  logit	Global Compact	Sustainability Report	GRI	Empty Cell	IR	Empty Cell	Assurance	Empty Cell	SDG	Empty Cell
+intercept	1005		831		252		537		975		1608
+pGreen	021		058		038		184		315		229
+pBlue	321		043		011		286		102		141
+Ranking	050		041		020		423		039		047
+Region
+ USA	000
+ Europe	201		115		005		202		151		098
+ JapanKoreaTaiwan	122		086		033		232		186		198
+ Other	131		027		037		232		143		084
+Industry	Included in regression but not displayed
+size	034		038		012		189		031		060
+ n	747		747		550		550		550		550
+ McFadden r2	019		011		007		017		018		027
+
+Significance codes p  0001  p  001  p  005
+44 Limitations and areas for further study
+
+The study has limitations in that only large stocklisted companies have been considered Even though they represent a considerable part of SDG relevant patents as reported in this study smaller companies still constitute the larger part A further limitation is that only technical innovation is considered and that not all technical innovations are patented An innovation may be important from a sustainable and commercial perspective but not be patentable because it fails the newness criterion required for patentability The patenting policy between companies may differ and not all patented innovations lead to marketable products or process implementations Abbas et al 2014 SDG relevant patents are defined in the specific way of the novel method employed which is based on technical keywords derived from SDG constitutive texts This method could be further refined and improved The study presents a crosssection in time of SDG relevant patents and does not address the question if there is a time dynamic of SDG relevant innovation driven by general societal trends or specifically the 2030 Agenda and its appeal to the private sector All these limitations provide avenues for further research
+5 Conclusion
+
+MNEs make important contributions to SDG related innovation as measured by their patents Overall they have 34 of all patent applications Of their patent applications 122 are SDG related This study distinguishes two types of SDG related innovation labeled as green patents related to environmental themes and blue patents related to improving conditions and meeting unmet sustainable development needs such as health nutrition water and sanitation MNEs contribution to the former is on average and to the latter below average However the most prominent innovative contribution of MNEs is to the blue Goal 3 Good Health and Wellbeing This is due to the fact that innovation related to this SDG is strongly related to diseases occurring in the developed world As pharmaceutical patents are frequently surrounded by controversies on medicine accessibility for poor countries such raises the question as to whether this type of innovation ultimately furthers overall sustainable development This illustrates one of the paradoxes inherent in the SDGs Another paradox is that the achievement of one goal may hinder the achievement of another such as pesticides fostering food security or health objectives but harming ecosystems
+
+SDG relevant innovation of MNEs seems to be related to geographic region and industry group with the JapanKoreaTaiwan group standing out This may be related to their export orientation the specific corporate group and lending structure and cultural factors The industry groups show different levels of absolute and relative SDG related innovation while there is also considerable spread within the groups The Materials and Automobiles and Components industries exhibit innovations related to energy savings and emission reduction
+
+SDG related innovation seems to be largely unrelated to external or institutional sustainability phenomena No association was found between SDG relevant SOI and the decision to engage in sustainability reporting frameworks Global Compact members seem to engage slightly more in blue innovation SDG relevant innovation is not reflected in the DJSI sustainability rating It could be a suggestion to include SDG relevant innovation in sustainability rankings as they are measurable and concrete For the sample of MNEs publishing a sustainability report there is some association between SDG relevant innovation and external assurance and for green innovation also mention of the SDGs in the report Even though the associations are weak the results do indicate that phenomena like the GC and SDG mentioning may not be merely symbolic
+
+The present study advances the understanding of the innovative contribution of MNEs to sustainable development It also increases the understanding by linking sustainable innovation to externally observable company characteristics such as industry and regional adherence and institutional corporate sustainability manifestations such as Global Compact membership and sustainability reporting It may also increase the awareness of the value of SDG relevant innovation for sustainability reporting and influence the evolution of reporting frameworks to include SDG relevant innovation
+CRediT authorship contribution statement
+
+Johannes WH van der Waal Conceptualization Methodology Validation Formal analysis Investigation Data curation Writing  original draft Writing  review  editing Thomas Thijssens Writing  review  editing Karen Maas Writing  review  editing
+Declaration of competing interest
+
+The authors declare that they have no known competing financial interests or personal relationships that could have appeared to influence the work reported in this paper
+Appendix A Supplementary data
+
+The following is the Supplementary data to this articl

@@ -1,0 +1,405 @@
+Abstract
+
+For millennia mining was not only a source of great economic wealth but also of social and environmental concern It therefore was a focus of the business and public policy sustainable development agenda for many years Thus many international programmes such as the International Council on Mining  Metals ICMM and the United Nations Development Programme UNDP tried to capture this concept by developing frameworks to guide in their implementation by the mining sector However there is scarce knowledge about the mining sectors contribution to the UN Sustainable Development Goals SDGs  the broadly accepted and politically legitimised post2015 development agenda This paper investigates the extent to which mining innovations that are employed or that will be employed in the future can make a contribution to achieving the SDGs in Europe To this end the authors identified current and future mining Innovation Concepts and challenges as well as designed an SDG impact framework for identifying the impacts of innovation concluding that almost all innovation concepts show repercussions on individual SDGs This indicates that innovation concepts not only depict synergies between the SDGS but also tradeoffs or imbalances between individual SDGs Further research is required on the overall environmental impact of technological innovations the implications for absolute decoupling of environmental impacts and economic performance and the possibility of rebound effects
+
+Previous article in issue
+Next article in issue
+Keywords
+Sustainable development
+Mining
+Innovation
+Sustainable development goals
+1 Introduction
+
+Mining for mineral and metal raw materials faces significant societal challenges On the one hand the negative impacts of mining such as disasters and rising global concerns about the safety and management of impacts have put a strain on public acceptance of mining projects in general On the other hand EU Member States EC 2012 2017 have recognized the importance of the mining sector in being able to satisfy the raw material demand for consumer products as well as for a successful transition towards achieving the United Nations Sustainable Development Goals SDGs
+
+Being both a part of the solution and the problem the supply of primary raw materials plays an important role in the trajectory of sustainable development Thus several international organisations and initiatives such as the International Council on Mining  Metals ICMM and the United Nations Development Programme UNDP have developed frameworks and guidelines to bring the mining sector more in line with sustainable development These frameworks or guidelines ICMM 2003 UNEP et al 2016 provide information on that which constitutes sustainable development in the mining sector and provide practical guidance for its stakeholders on how to achieve it While only a handful of international studies contextualise the corporate perspective with an integrative sustainable development framework that carries both societal relevance and legitimacy none of these studies provide a European perspective In this regard an outlook on which and how corporate practices contribute to an accepted and politically legitimised framework for sustainable development would be of immense utility for both private and public sector decisionmakers
+
+Given the recent development of a European Agenda for the implementation of the UN SDGs EC 2016 2017 the purpose of this study is to investigate to what extent the mining sector in Europe can make a contribution to achieving the SDGs To this end this paper first explains the importance of a sustainable mineral supply in the context of sustainable development and then explores the specific challenges the mining sector in Europe faces in order to contribute to sustainable development The second part clarifies the methodological approach with regard to the design of Innovation Concepts Innovation concepts characterise a broader definition of concrete previously identified industry innovation examples such as Rio Tintos AutoHaul and Codelcos driverless trucks based on the intended outcomes autonomous equipment and operations and the screening of innovation impacts on an SDG framework for the mining sector Through the analysis the future innovation potential for achieving individual SDGs as well as identifying strong points and blind spots in the sectors current and future innovation efforts was investigated The discussion on Innovation Concepts and the prevalence or absence of impacts on certain SDGs identifies both promising future practices for industry players as well as guidance for policymakers on programming of supportive RDI policy instruments
+11 Sustainable development and the mining sector
+
+Since its inception on the international political agenda through the World Commission on Environment and Development WCED in 1987 the concept of sustainable development has been present in many societal and academic debates Due to its normative nature and the different disciplinary backgrounds of professionals dealing with sustainable development Waas et al 2011 such as the mining sector the concept is open to interpretation in different contexts Hopwood et al 2005 As outlined by Hilson and Murck 2000 most of the discussions on mining minerals and sustainable development to date are concerned with sustainability at the global and national scales While some scholars Ali et al 2017 Auty and Warhurst 1993 Calas 2017 Mikesell 1994 Pokhrel and Dubey 2013 Tilton 1996 amongst others provide perspectives on how the benefits of mineral production and use can be sustained over longer time frames others discuss the value of sustainable development as a management approach to resolve the growing concerns in balancing the needs of the environment economy and society
+
+Although sustainable development is a multidimensional concept which follows an integrative approach based on socioeconomic and institutional development objectives with environmental ones Christen and Schmidt 2012 Lele 1991 Robinson 2004 most research on sustainable development in the mining sector does not follow this conceptual consideration Research relating explicitly to the concept of sustainable development mostly focuses on one of its three dimensions thus a compartmentalized or sectoral approach to SD see for example the social dimension Gunarathne et al 2016 Petkova et al 2009 Suopajrvi et al 2016 Tiainen 2016 or environmental dimension Schoenberger 2016 Shen et al 2015 In this regard academic debates from both the sustainable development Giddings Atlin and Gibson 2017 Christen and Schmidt 2012 Giddings et al 2002 Kates et al 2005 and mining science field Hilson and Murck 2000 Onn and Woodley 2014 caution that sustainable development has multiple dimensions where focusing on only one dimension might undermine the achievement of the others The current discussion on an integrative sustainable development approach is taken forward by scholars investigating both a corporate management perspective see for example Dashwood 2014 Espinoza and Morris 2017 Espinoza and Rojo 2017 Fitzpatrick et al 2011 Govindan et al 2014 Hilson and Murck 2000 Pedro et al 2017 and a public policy management perspective see for example Endl 2017 Everingham et al 2013 McAllister et al 2014 Prno and Slocombe 2012
+
+The fact that sustainable development is open to a multitude of interpretations Hopwood Hopwood et al 2005 and that the danger of engaging in silothinking or onedimensional approaches exists there is a need to develop holistic and integrated sustainable development frameworks and guidelines for action Since the inception of sustainable development some international organisations UNDP World Economic Forum WEF ICMM have strived to interpret the concept in the context of the mining sector Buxton 2012 ICMM 2003 Sethi and Emelianova 2006 UNEP et al 2016 to provide a broadly accepted framework for action While some frameworks acquire their legitimacy from broadly accepted stakeholder consortia consisting of private sector actors ICMM principles others are delineated from politically derived sets of international development goals UN 2015 Among these the SDGs have the benefit that they provide 169 discernible sub targets for different countries andor sectors that can be more readily transferred to more concrete criteria in other contexts such as mining Costanza et al 2016 However there is little debate on the relationship of corporate practices in the mining sector and the SDGs in Europe
+
+In this regard research assessing the contribution of corporate sector practices towards sustainable development mostly focuses on scientifically constructed sustainable development frameworks Bui et al 2017 Moran and Kunz 2014 Moran et al 2014 Ogan et al 2016 Pimentel et al 2016 Yaylac and Dzgn 2017 that lack societal legitimacy from more broadly accepted or negotiated sustainable development frameworks Only few studies Pesmatzoglou et al 2014 Sethi and Emelianova 2006 Sethi and Emelianova 2011 Tost et al 2016 UNEP et al 2016 Yakovleva et al 2017 contextualise the corporate perspective in an integrative sustainable development framework that carries both societal relevance and acceptance Among these the report Mapping Mining to the Sustainable Development Goals An Atlas is one of the most comprehensive approaches to interpret a broadly accepted and integrated sustainable development framework in the context of the mining sector In this regard it shows what kind of mining corporate practices on a global scale contribute to specific SDGs According to Starke 2016 a futureoriented and widely accepted approach such as the SDGs would be a change for the mining industry to integrate their practices within a broader sustainable development framework At the European level however there is little to no evidence as to what extent the mining sector contributes to the multidimensional framework of the SDGs Given the recent developments of the European Union to implement a European Agenda for the implementation of the SDGs EC 2017 Pisano et al 2016 the authors investigated the extent to which the European mining sector can make a contribution to achieving the SDGs
+12 European Mining sector challenges and innovation responses
+
+The literature review the authors conducted suggests that innovation plays a key role in addressing mining challenges However there are two different approaches towards the role of innovations The first as supported by eg Mudd 2010 RioTinto 2014 RTC 2012 Batterham 2017 represents an insideout approach as it sees the geology declining grades deeper and remote ore bodies and economic viability of an ore body as key with safety legislation and the environment seen as major constraints that need to be considered The focus of innovations is on technology and their driver is mainly increased profitability The second approach representing an outsidein approach eg Buxton 2012 EC 2013 Franks and Cohen 2012 Hilson and Murck 2000 WEF 2015 looks at mining from a broader sustainability driven societal perspective which includes challenges such as minings role in a circular economy supply security contribution to climate change and increased consumer demand for transparency In this case the typology of innovations focuses not only on technology but also on societal concerns as their key drivers
+
+Mining  Metals in a Sustainable World 2050 published by the World Economic Forum WEF provides a summary of the challenges the mining industry will face in the future WEF 2015 WEF identifies five drivers of change environmental technological societal geopolitical and geographical and six areas of transition and related key challenges for each area of the mining industry as shown in Table 1 Particularly relevant in the European context is security of supply and a move towards a circular economy which touches on all areas in the table below
+
+Table 1 Areas of transition for mining  metals WEF 2015
+Resource Base	Strategy  operating model	Technology  innovation	External Relationships	People  workforce	Demand Value chains
+Virgin resources and new frontiers	Strategy leadership and embedding change	Process improvements and innovation	External governance and regulations	Skills and attracting future labour	Endconsumer demand and behaviour changes in the transition to a sustainable future
+Reuse and recycle commodities and metals	Partnership models as part of business model	Equipment technologies	Government engagement and relations	Labour relations
+Enabling resources  Access and efficiency eg water power land	Investment models	Supporting infrastructure	Civil society and community engagement development goals and infrastructure
+
+In summary the challenges the mining industry faces in the future are strongly linked to sustainability and related frameworks including the SDGs with innovation and in particular technological innovations seen as part of the solution
+
+Comparing current and future challenges of the European mining sector and the recent developments for implementing the 2030 Agenda for sustainable development in Europe it was investigated to what extent the mining sector can make a contribution to achieving the SDGs in Europe More specifically it was analysed which industry innovations exist that can respond to these challenges and what their impact on the SDGs is
+
+In this regard this paper focuses on the following research question What is the impact of the current and future Innovation Concepts in mineral extraction on individual SDGs
+2 Materials and methods
+
+Overall this paper engages in an exploratory and qualitative assessment of European innovation trends in the mining sector and their contribution to the SDGs and follows a stepwise approach
+
+
+
+    Identification and description of Innovation Concepts in the mining sector The first step aimed at describing current as well as upcoming Innovation Concepts in the mining stage of extraction taking place in Europe
+
+
+    Design of a mining sector impact framework based on SDGs The second step concerned the elaboration of an impact framework based on the SDGs adapted to European mining sector challenges
+
+
+    Screening of impacts of Innovation Concepts The third step characterised Innovation Concept impacts on the SDG impact framework
+
+Identification and description of Innovation Concepts in the mining sector
+
+First deskresearch was conducted in order to identify 1 major challenges for the mining sector and 2 current innovations that are applied in mining in Europe to address these challenges In this regard company innovation reports international organisation or research project reports on best practice examples of mining sector innovations in Europe were screened Most of the innovations have been identified in the Horizon 2020 Project MINGUIDE Tost et al 2016 The authors compiled 30 responses from a questionnaire and conducted 12 semistructured interviews with experts from academia mining companies NGOs geological surveys government and independent consultants from 14 different European countries the US Canada and Brazil to both validate deskresearch results on previously identified industry innovations and expand the number of industry innovation examples The final list consisted of 24 industry innovations currently applied in European mining or corresponding RDI projects
+
+In a second step the authors aggregated industry innovation examples into 18 Innovation Concepts Innovation concepts characterise a broader definition of concrete previously identified industry innovation examples eg Rio Tintos AutoHaul and Codelcos driverless trucks based on the intended outcomes autonomous equipment and operations Finally the Innovation Concepts were clustered in two distinctive groups aligned with the inside  out and outsidein approaches mentioned in the introduction see for example Enkel et al 2009 1 innovation concepts improving economic viabilityproductivity and 2 innovation concepts responding to societal needs
+21 Design of an SDG impact framework
+
+The aim of this step was to develop an impact framework that contextualizes the SDGs with the mining sector and in particular with regard to the European Mining sector challenges The work conducted was primarily based on the Mining Atlas United Nations Development Programme 2016 that describes the mining sectors contribution to each of the SDGs
+
+First the authors structured individual SDGs in the Mining Atlas UNEP et al 2016 into separate subcomponents SDG Aspects that represent more detailed information with regard to the mining sectors contribution to an individual SDG Second the authors compiled additional information on each of the SDGs by conducting a literature review on academic and nonacademic sources about SDGs in the mining sector key words used sustainable development goals mining The individual SDG Aspects have been used to enhance the understanding of previously elaborated SDG aspects by adding information to the additional explanatory text from academic and nonacademic sources
+22 Screening of innovation concept impacts
+
+During this step the authors identified and described the impacts of individual Innovation Concepts on the SDG impact framework A mixedmethod approach was once again used First deskresearch was conducted with accompanying document analysis to identify SDG aspects using concrete innovation examples mostly from Europe in some cases examples from outside of Europe but with equal relevance for Europe were used as well as the text describing the elaborated Innovation Concepts
+
+The nature of real impacts of mining on the SDG framework are manifold reveal themselves in a complex societal network and sometimes manifest themselves only years after a mining project has started The main challenge was therefore to screen recent and untested Innovation Concepts for their potential exante direct causal impacts on a sustainable development framework
+
+The screening of Innovation Concepts and their related concrete examples focused on direct and causal effects of the individual innovation examples and should therefore not be seen as an assessment of an innovation as a whole The direct impacts concern company level impacts on their immediate and direct environment as relevant to the specific Innovation Concept Second order effects or rebound effects and effects on the broader socioeconomic system were purposefully excluded
+
+The authors distinguished four types of potential innovation impacts on the SDG framework during the screening and validation process a no expected impacts b negative expected impacts mostly based on the description of the innovation and direct relation to an SDG Aspect c positive expected impacts either explicitly stated in the background documents or based on the description of the innovation and direct relation to an SDG aspect and d yet undetermined or controversial expected impacts in case there are different scientific views on the subject
+
+In a second step these impacts of Innovation Concepts and their concrete examples were validated by interviews with six experts from academia and industry
+23 Scope and limitations
+
+
+
+    Focus on mining stage extraction The authors purposefully chose to relate only to innovations in the extraction phase of the mining activity ie extraction involves the development the opening up of an ore deposit for production and exploitation the large scale production of ore in a mine However some of the listed Innovation Concepts go beyond extraction but are still very relevant for or have a strong influence on the actual extraction process eg resource characterisation
+
+
+    SDG based framework versus other sustainable development frameworks The SDGs as a politically tailored and driven approach to achieving sustainable development are one among many other frameworks currently applied by the mining sector Although the SDG framework has some disadvantages to other frameworks for example with regard to scientific rigor or specificity Nilsson and Costanza 2015 it nevertheless represents a universal integrated and transformational set of global goals and targets for sustainable development and the political declaration on the post2015 development Agenda
+
+
+    System boundaries of impacts The direct impacts concern company level impacts on their immediate and direct environment as relevant to the specific Innovation Concept For example this can be a specific mine and its surrounding stakeholders in the case of autonomous equipment and operations or can be a company and its customers in the case of new business models and customer relations We purposefully excluded second order or rebound effects
+
+
+    Data limitations As this is an exploratory study the data on Innovation Concepts while aligned with desktop research on the topic is based on a low number of expert interviews and questionnaire input which was conducted with a limited mix of stakeholders mainly from Europe The validation of impacts was also based on a low number of interviews
+
+3 Results
+
+The results section is divided into two major parts The first part provides descriptive information on European Innovation Concepts and the analytical SDG framework against which these innovations have been tested for impacts The second part elaborates on a storyline of impacts describing the impacts of Innovation Concepts on the SDG framework
+31 Innovation concepts and examples
+
+Table 2 Describes the innovation concepts lists concrete examples and groups them into economic or societal based on the methodology described above
+
+Table 2 Innovation Concepts and examples
+Group	Innovation concept
+Economic	Autonomous equipment and operations
+Mining operations use autonomous equipment trucks drills trains etc with the ultimate goal of running autonomous operations This includes also the use of remote control centres robotics and 3D printing Key results are operating cost reductions a lower environmental footprint and reduced but higher skilled local jobs It might also facilitate the opening of new mines that otherwise would not be economically feasible
+Innovation example Rio Tintos AutoHaul RioTinto 2014 Codelcos driverless trucks EMJ 2014
+IT platforms and process control systems
+Use of IT for process control incl The Internet of things with more and better sensors big data management and use of Artificial Intelligence real time information and mass flows Key results include lower operating costs improved resource use and reduced but higher skilled local jobs It might also facilitate the opening of new mines that otherwise would not be economically feasible
+Innovation example Strabags matDOC Softwaresystem MINGUIDE 2017b
+Continuous mining processes
+A combination of new technologies such as continuous excavators and better use of existing technologies such as conveyors lead to continuous mining processes replacing traditional drilling blasting and haulage Key results include operating cost reductions a lower environmental footprint and reduced but higher skilled local jobs It might also facilitate the opening of new mines that otherwise would not be economically feasible
+Innovation example Sandviks MX650 continuous excavation system MINGUIDE 2016 Vales S11D mine MINGUIDE 2017c
+Better resource characterisation
+A combination of new technologies including sensors analytical equipment and better geological modelling systems allow for better resource characterisation Key results include cost reductions a lower environmental footprint eg lower land demands and better structural control providing safety improvements It might also facilitate the opening of new mines that otherwise would not be economically feasible
+Innovation example Outotecs OreMet Optimizer Outotec 2017
+Better mine design
+A combination of technologies including new surveying methodologies eg drone use and better mine modelling and visualisation lead to better mine designs Key results include productivity improvements and lower environmental footprint ie land use and biodiversity impact
+Innovation example Rio Tintos RTVis Software RioTinto 2014
+Equipment Scale Up To improve economy of scale the scale up and improvement of production equipment continues Key results include higher productivity and reduced environmental impact
+Innovation example Belazs 75710 haul truck BELAZ 2017
+Digitally enabled worker
+Use of new technologies such as augmented or virtual reality enabled communication devises tracking technologies and virtual collaboration lead to a digitally enabled worker Key results include improved productivity and safety
+Innovation example VR safety trainings at UNSW in Australia UNSW 2016
+Disruptive new or alternative mining methods
+New andor alternative mining methods such as insitu leaching emerge replace traditional mining methods Key results include cost reduction a lower environmental footprint ie energy waste land use and biodiversity except for water and low numbers of local jobs It might also facilitate the opening of new mines that otherwise would not be economically feasible
+Innovation example H2020 project BioMOre BIOMOre 2017
+Deep Sea Mining
+New use of technologies enable mining in extreme environments such as the deep sea extreme depths or the arctic etc Key results include new mines that provide economic benefits new environmental impact and low numbers because of technology used new jobs or local procurement It might also facilitate the opening of new mines that otherwise would not be economically feasible
+Innovation example Nautilus Mining NautilusMinerals 2017
+New financing models
+New models for financing of mining such as community or crowd funding enable new and more mining companies to open mines
+Innovation example EUCanada Mineral Investment Facility ErnstYoung 2017
+Societal	New business models and customer relations
+New business models such as collaborative business models or values based models social enterprises and models based on different customer relations such as leasing of metals emerge Key results include higher local economic participation a lower environmental footprint and increased local jobs
+Innovation example Chilean ENAMI Network ENAMI 2017
+Enhanced transparency and traceability
+The combination of technologies including open source databases to enhance transparency or block chain technology usage for tracking resources to improve product stewardship and new initiatives enhance transparency and traceability in the mining value chain Key results include better access to markets improved environmental performance especially at small mines and better working conditions human rights safety
+Innovation example SITRA NETWORK for sustainable mining SITRA 2017
+Better land use planning
+More collaborative governance and better data usage will allow for new modelsanalysis to better incorporate mines into regional development plans incl modelling of site level vs cumulative impact at regional level Key results include improved economic integration local procurement diversification etc and a lower environmental footprint
+Innovation example MINATURA 2020 Minatura 2015
+Shared infrastructure
+Infrastructure is planned and built for multipurpose usage by means of application of new business models or contracts and accessible to other stakeholder groups ie renewable electricity internet and other communication and mine to market transport infrastructure Key results include increased economic growth and more jobs but also an increased environmental footprint
+Innovation example Vales Nacala railway corridor in Mozambique RailwayGazette 2017
+Low environmental footprint mining
+A combination of new technologies and management approaches is introduced mainly to reduce the environmental footprint of mining ie in areas such as land use energy and CO2 water or waste
+Innovation examples Sleipners new transport solutions to reduce fuel demand MINGUIDE 2017a Filtered tailings disposal Gunson et al 2012 QMMs biodiversity approach Temple et al 2012
+Renewable Energy solutions
+The supply of electricity from renewable sources provider and inhouse generation on the one hand and technologies to replace or electrify fossil fuel based equipment on the other hand lead to significant reductions in CO2 emissions
+Innovation example Liebherrs T236 hybrid haul truck Liebherr 2016
+Towards zero accidents
+Various safety innovations including psychology based programmes leading to behaviour change and new technologies such as personalised warning systems or augmented reality lead to improved safety performance
+Innovation example Caterpillars Driver Safety System Caterpillar 2016 Du Ponts STOP behavioural safety system DuPont 2017
+Better skills base
+Innovations in management programmes social business models or community cooperation lead to higher skills levels or local procurement actions
+Innovation example BHPCodelco Chilean World Class Supplier Cluster BHP 2014
+
+The innovations in the economic group include concepts that can be applied to existing mining operations to improve their profitability or to increase the economic viability of new projects They are autonomous equipment and operations which was mentioned in the interviews and questionnaires as most significant for European mining IT platforms and process control systems continuous mining processes better resource characterisation better mine design equipment scale up and digitally enabled workers The other concepts in this group disruptive and new mining methods deep sea mining and new financing models mainly apply to new projects and increase their economic viability The innovations in the societal group are driven by environmental and social concerns and include new business models and customer relations enhanced transparency and traceability better land use planning shared infrastructure low environmental footprint mining renewable energy solutions towards zero accidents and better skills base
+32 Elaboration of an SDG impact framework
+
+In this step an impact framework was developed that contextualizes the SDG framework with the mining sector and in particular with regard to the European Mining sector topics and challenges The work was primarily based on UNEP UNEP et al 2016  the Report White Paper  Mapping Mining to the Sustainable Development Goals An Atlas henceforth referred to as the Atlas  which contextualised the Sustainable Development Goals for the mining sector
+
+In order to develop a suitable impact framework for screening innovation impacts individual SDGs were structured into separate aspects that helped to more clearly identify these impacts First SDG aspects in the Atlas were identified that provided a detailed and operationalised description of the SDG Secondly based on research on SDGs and the mining sector de Mesquita et al 2017 Yakovleva et al 2017 existing SDG Aspects were complemented or new ones added Thirdly the description of identified SDG Aspects has been complemented with important European policy documents EC 2013 2016 2017 A full documentation of identified SDG Aspects can be found in the Annex of this paper whereas the full description of SDG Aspects ie explanatory text can be found in the Supplementary file
+
+Table 3 shows SDG 12 Ensure sustainable consumption and production patterns as an example that comprises three different SDG Aspects 1 Minimise resource use and waste 2 Incorporate life cycle thinking and 3 integrate sustainability information into reporting The individual SDG Aspects have been further elaborated with additional explanatory text such as for the SDG Aspect Minimise resource use and waste minimise use of water land energy and chemicals minimise production of waste effluent and emissions repurpose waste rock
+
+Table 3 Example of SDG 12 in the SDG impact framework structure
+Aspect title	Additional explanatory text
+Minimise resource use and waste
+
+
+
+    minimise use of water land energy and chemicals
+
+
+    minimise production of waste effluent and emissions
+
+
+    repurpose waste rock
+
+Incorporate life cycle thinking
+
+
+
+    Analyse mineral and chemical products across sourcing transport storage use and production
+
+
+    Extend responsible sourcing to suppliers
+
+integrate sustainability information into reporting	na
+
+SDG 12 Ensure sustainable consumption and production patterns
+
+This resulting framework enabled the authors to provide a contextualization for the mining sector and a distinct and valid structure of an SDG impact framework for the latter assessment of Innovation Concept impacts
+33 Innovation concept impacts on the SDG impact framework
+
+This section provides an overview of the most frequent impacts of the above described Innovation Concepts on the individual SDGs The full impact screening of all Innovation Concept impacts on the SDGs which is too large for inclusion in this paper can be accessed in the Supporting file section Table 4 shows an example depicting the explanation for each impact of disruptive new or alternative mining methods on SDGs 1 to 5 It has two negative impacts on SDG 1 both a positive and a negative impact on SDG 2 an undetermined impact on SDG 3 a positive impact on SDG 4 and no impact on SDG 5
+
+Table 4 Impact example of disruptive new or alternative mining methods on SDGs 1 to 5
+Empty Cell	SDG 1	SDG 2	SDG 3	SDG 4	SDG 5
+Disruptive new or alternative mining methods	 local employment less jobs with lower skills
+ Local procurement opportunities will be less for more technologically advanced equipment	 minimise land take
+ pollutionfree farmland chemical and bacteria usage in insitu leaching impact on groundwater	 Occupational health and safety less workers will be working at the actual site of mining however new processes and chemicals
+ Preventative care reduce toxic emissions to the environment ie chemicals bacteria	 train and educate workforce higher skill levels required for engineering and computing
+
+SDG1 End poverty in all its forms everywhere
+
+
+
+    Aspect inclusive employment
+
+
+    Aspect Local Procurement
+
+The majority of negative impacts indicate an overall reduced employment and fewer opportunities for local workers with lower skill levels the deployment of technologically advanced equipment and machinery requires highly specialised skills and an educated and trained labour force which is normally not present in remote mining areas On the contrary innovation approaches such as Shared infrastructure or New business models and customer relations facilitate in particular local procurement and employment opportunities
+
+SDG 2 End hunger achieve food security and improved nutrition and promote sustainable agriculture
+
+
+
+    Aspect Synergies with agriculture
+
+The majority of positive impacts describe a decreased demand of land for mining purposes and thus reduced pressure of land use for other purposes such as agriculture
+
+SDG 3 Ensure healthy lives and promote wellbeing for all at all ages
+
+
+
+    Aspect Occupational health and safety
+
+
+    Aspect Preventative care
+
+The majority of positive impacts describe a mining installation environment where overall fewer workers are exposed to hazards or improved hazard recognition systems will be in place Furthermore positive impacts comprise the reduction of toxic emissions to the mine site environment and the local communities
+
+SDG 4 Ensure inclusive and equitable quality education and promote lifelong learning opportunities for all
+
+
+
+    Aspect Train and educate workforce
+
+The majority of positive impacts describe that technological advancement requires an upgrade of the skills base in the mining sector that leads to training of existing work and potential labour force particularly in the area of engineering and computing
+
+SDG 5 Achieve gender equality and empower all women and girls
+
+No impacts have been reported for aspects described in SDG 5
+
+SDG 6 Ensure availability and sustainable management of water and sanitation for all
+
+
+
+    Aspect Conserve and recycle water
+
+
+    Aspect Manage water holistically
+
+The majority of positive impacts describe water conservation and recycling of waste water due to better process controls Integrated land use planning and monitoring tools positively contribute to a more holistic water management approach
+
+SDG 7 Ensure access to affordable reliable sustainable and modern energy for all
+
+
+
+    Aspect Improve energy efficiency
+
+Most positive impacts indicate an increased efficiency in the use of energy in mining operations
+
+SDG 8 Promote sustained inclusive and sustainable economic growth full and productive employment and decent work for all
+
+
+
+    Aspect Communicate opportunities and limits of mining
+
+Most positive impacts deal with improving the economic viability of future mining projects as well as an increase in employment opportunities for higher skill levels
+
+SDG 9 Build resilient infrastructure promote inclusive and sustainable industrialisation and foster innovation
+
+
+
+    Aspect Support local procurement
+
+
+    Aspect Shared infrastructure
+
+Most positive impacts originate from the benefits of shared infrastructure projects that may 1 lead to collaborative business models in the area of transport or power generation 2 better integrate mining site developments into regional development or 3 facilitate spillover effects for broader economic development into other sectorsareas
+
+SDG 10 Reduce inequality within and among countries
+
+
+
+    Aspect Anticipate inequality related risks
+
+Negative impacts indicate the inequality related risks with regard to job opportunities in the local community Job opportunities requiring higher skill levels in urban areas due to mining control centres will become more frequent compared to ruralmine site area job opportunities
+
+SDG 11 Make cities and human settlements inclusive safe resilient and sustainable
+
+
+
+    Aspect Mine unconventional deposits
+
+
+    Aspect Plan land use carefully
+
+Most positive impacts concern the mining of unconventional deposits such as new innovations providing access to urban waste landfills or the recovery of critical metals from difficult sources New collaborative models of mining operations with other economic sectors or integrated regional development plans facilitates better lifeofmine planning and protection and safeguarding of cultural or natural heritage
+
+SDG 12 Ensure sustainable consumption and production patterns
+
+
+
+    Aspect Minimise resource use and waste
+
+The majority of positive impacts concern the waste reduction through reduced fuel use and a minimisation of waste material through more efficient operations On the contrary some innovations might cause negative impacts through increased use of water resources while reducing waste material Bioleaching or create new environmental impacts in previously unmined environments deepsea mining
+
+SDG 13 Take urgent action to combat climate change and its impacts
+
+
+
+    Aspect Reduce emissions
+
+The majority of positive impacts describe energy efficiency gains and a consequent reduction in GHG emissions whereas only a few impacts indicate the use of renewable energy or lowemission fuels as important contributions
+
+SDG 14 Conserve and sustainably use the oceans seas and marine resources for sustainable development
+
+
+
+    Aspect Approach seafloor mining with precaution
+
+One specific Innovation Concept is directly related to this SDG the emergence of deep sea mining as a new concept of mining Even if taken with precautions mining in new environments will cause new environmental impacts to oceans
+
+SDG 15 Protect restore and promote sustainable use of terrestrial ecosystems sustainably manage forests combat desertification and halt and reverse land degradation and halt biodiversity loss
+
+
+
+    Aspect Achieve net positive or no net loss impact
+
+
+    Aspect Preserve ecosystem services
+
+The majority of positive impacts state that a reduced land use for mining activity will lead to a lower impact on ecosystem services Other less frequent positive impacts describe that certain biodiversity management approaches and better integrated land use planning procedures achieve a net positive a no net loss impact or minimise impacts on biodiversity
+
+SDG 16 Promote peaceful and inclusive societies for sustainable development provide access to justice for all and build effective accountable and inclusive institutions at all levels
+
+
+
+    Aspect A strong SLO approach
+
+The impacts listed under SDG 16 provide a more ambivalent picture of both positive and negative impacts The provision of jobs in the mining sector for the local community was always a strong driver for acquiring a social licence to operate SLO However the deployment of technologically advanced equipment and machinery requiring highly specialised skills and an educated and trained labour force not normally present in remote mining areas might reduce employment opportunities in the local community However Innovation Concepts such as Shared infrastructure or New business models and customer relations facilitate in particular local procurement and employment opportunities that in turn facilitate a social licence to operate
+
+SDG 17 Strengthen the means of implementation and revitalise the global partnership for sustainable development
+
+
+
+    Aspect engage in RDI collaboration facilitate good practice innovation transfer
+
+Most positive impacts concern the setup and coordination of RDI partnerships The further development deployment as well as operation and maintenance of certain Innovation Concepts requires additional expertise from other sectors such as computing or robotic engineering
+
+Lastly the four impact types were plotted   blank spaces representing no impact as shown in Table 5 for analysis of the impacts and to identify differences and trends
+
+Table 5 Innovation Concepts and respective impacts apportioned to individual SDGs
+Empty Cell	SDG 1	SDG 2	SDG 3	SDG 4	SDG 5	SDG 6	SDG 7	SDG 8	SDG 9	SDG 10	SDG 11	SDG 12	SDG 13	SDG 14	SDG 15	SDG 16	SDG 17
+Autonomous equipment and operations
+IT platforms and process control systems
+Continuous mining processes
+Better resource characterisation
+Better mine design
+Equipment Scale Up
+Digitally enabled worker
+Disruptive new or alternative mining methods
+Deep sea mining
+New financing models
+New business models and customer relations
+Enhanced transparency and traceability
+Better land use planning
+Shared infrastructure
+Low environmental footprint mining
+Renewable energy solutions
+Towards zero accidents
+Better skills base
+4 Discussion and conclusion
+
+The aim of this paper was to demonstrate the extent to which current and future mining innovations in Europe can make a contribution to achieving the SDGs To this end the authors identified current and future Innovation Concepts as well as designed an SDG impact framework for identifying the potential direct innovation impacts In response to current and future Innovation Concepts in mineral extraction in Europe and their impact on individual aspects of the SDGs the following conclusions can be drawn
+
+
+
+    There is no onesizefitsall single Innovation Concept that will resolve minings challenges and contribute positively to all the SDGs Quite on the contrary almost all Innovation Concepts show repercussions on individual SDGs ie this indicates that Innovation Concepts not only depict synergies but also tradeoffs or imbalances between individual SDG aspects However tradeoffs implying negative impacts on one SDG might undermine the success of other directly linked or interdependent SDGs Gibson et al 2005 Onn and Woodley 2014 Thus making explicit the interdependencies of both goals eg SDGs as well as measures eg Innovation Concepts is an important step to anticipate unintended sideeffects and design accompanying measures to mitigate these exante
+
+
+    The insideout economically driven technological innovations change the societal contract of mining The promise of increased employment opportunities in the mining sector for the local community was always a strong driver for acquiring a social licence to operate Joyce and Thomson 2000 Prno and Slocombe 2012 In this regard SDG 1 employment and local procurement SDG 3 workers health and safety SDG 10 regional inequality SDG 16 SLO provide an interesting nexus of impacts The majority of negative impacts on SDG 1 indicate overall reduced employment and fewer opportunities for local workers with lower skill levels In addition the deployment of technologically advanced equipment and machinery requires highly specialised skills and an educated and trained labour force that is normally not present in remote mining areas which might reduce employment opportunities in the local community even further However innovation approaches such as Shared infrastructure or New business models and customer relations facilitate in particular local procurement and employment opportunities that in turn facilitate a SLO Collier and Ireland 2015 Furthermore job opportunities requiring higher skill levels in urban areas due to mining control centres will become more frequent compared to ruralmine site area job opportunities increasing regional inequality related risks However the deployment of advanced equipment and machinery for example originating from other economic sectors might lead to increased crosssectoral RDI collaboration Sparc 2016
+
+
+    Overall many of the Innovation Concepts analysed have positive impacts on the environmental SDGs which is generally due to efficiency improvements compared to currently applied approaches particularly in the area of GHG emission mitigation and innovation concepts which generally provide positive impacts Compared to the high prominence of GHG reduction the issue of adaptation measures or measures for building up adaptive capacity for future impacts is nonexistent More specifically none of these innovations takes a precautionary approach towards the integration of climate change impacts on the local environment which might have serious repercussions on mine site safety for example These aspects concern the recognition of climate change in planning and investment as well as building capacity for increased climate change resilience Arent et al 2015 Northey et al 2017
+
+
+    Innovations do not contribute to SDG 5 on gender equality and empowerment The topic of gender equality and empowerment of woman was among identified mining sector challenges as well as innovation concepts and their impacts Although several authors Laplonge 2014 Ranchod 2001 point out that gender inequality is a topic of concern for the mining sector overall this research did not identify it as a crosscutting issue or standalone innovation concept
+
+
+    Given their very nature the societal innovations are mainly positive for the SDGs ie social and environmental but often have negative implications on the direct economic viability of mining operations but in the longterm might have positive second order impacts ie SLO
+
+Further research is needed on the following topics
+
+
+
+    The overall environmental impact of these innovations ie the technological ones see above needs to be assessed as to whether it leads to an absolute decoupling or if there is even a possible rebound effect due to the increased economic viability of additional mines
+
+
+    Looking differently at the value chain of materials  an innovation perspective driven by downstream producers and consumers In the context of SDG 12 Ensure sustainable consumption and production patterns and the current circular economy discussions in Europe a different look on the whole value chain of materials might be needed  while the innovation theme Enhanced transparency and traceability was mentioned the research was as yet unable to find a practical example for driving materials stewardship more towards the raw materials producer so they are invested in the future use of the materials they mine eg through leasing of metals rather than selling them Hagan et al 2019 responsible sourcing or materials stewardship programs facilitated by manufacturing companies Apple 2017 Fleury and Davies 2012
