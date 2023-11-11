@@ -1,3 +1,4 @@
+import os
 import random
 
 import uvicorn
@@ -26,16 +27,25 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-sources = [
-    InformationSource(url="https://www.google.com", title="Google"),
-    InformationSource(url="https://www.wikipedia.org", title="State of The Union")
-]
+sources = []
 
 
 @app.post("/query")
 async def query(query: Query):
     print(f"Q: {query.question}")
-    loader = TextLoader("../data/state_of_the_union_full.txt", encoding="utf-8")
+    if os.environ["ENV"] == "fe_dev":
+        return Answer(answer="42",
+                      confidence=0.42,
+                      sources=[
+                          InformationSource(url="https://www.google.com", title="Google",
+                                            raw_content="Last year COVID-19 kept us apart. This year we are finally together again."),
+                          InformationSource(url="https://www.wikipedia.org", title="Wikipedia",
+                                            raw_content="With a duty to one another to the American people to the Constitution.  And with an unwavering resolve that freedom will always triumph over tyranny."),
+                          InformationSource(url=None, title="custom text",
+                                            raw_content="America is moving. Moving forward. And we can't stop now.")
+                      ])
+
+    loader = TextLoader("data/state_of_the_union_full.txt", encoding="utf-8")
     documents = loader.load()
     text_splitter = CharacterTextSplitter(chunk_size=1000, chunk_overlap=0)
     texts = text_splitter.split_documents(documents)
@@ -60,7 +70,6 @@ async def query(query: Query):
                                      chain_type_kwargs=chain_type_kwargs)
 
     res = qa.run(query.question)
-    print(res)
 
     return Answer(answer=res, confidence=random.random(), sources=sources)
 
