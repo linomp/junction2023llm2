@@ -1,8 +1,11 @@
 import uvicorn
+from dotenv import load_dotenv
 from fastapi import FastAPI
 from starlette.middleware.cors import CORSMiddleware
 
-from models.models import Query, Answer, InformationSource
+from api_models.models import Query, Answer, InformationSource
+
+load_dotenv()
 
 app = FastAPI()
 
