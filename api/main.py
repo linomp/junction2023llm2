@@ -36,7 +36,6 @@ async def query(query: Query):
 
     core_model_answer = get_answer(sources, query)
 
-    print(f"Q: {core_model_answer.question}")
     print(f"A: {core_model_answer.answer}")
     print(f"Sources: {core_model_answer.sources}")
 
