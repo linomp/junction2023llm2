@@ -21,7 +21,7 @@ app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=["http://localhost:3000"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -29,15 +29,17 @@ app.add_middleware(
 
 sources = []
 
+
 def get_text_chunks_langchain(text):
     text_splitter = CharacterTextSplitter(chunk_size=500, chunk_overlap=100)
     docs = [Document(page_content=x) for x in text_splitter.split_text(text)]
     return docs
 
+
 @app.post("/query")
 async def query(query: Query):
     print(f"Q: {query.question}")
-    if os.environ["ENV"] == "fe_dev":
+    if os.environ.get("ENV", None) == "fe_dev":
         return Answer(answer="42",
                       confidence=0.42,
                       sources=[
@@ -49,9 +51,8 @@ async def query(query: Query):
                                             raw_content="America is moving. Moving forward. And we can't stop now.")
                       ])
 
-    #loader = TextLoader("../data/state_of_the_union_full.txt", encoding="utf-8")
+    # loader = TextLoader("../data/state_of_the_union_full.txt", encoding="utf-8")
     documents = get_text_chunks_langchain("aaaaaaaaaaaaaaaaaaaa")
-
 
     # TODO: serialize the embeddings and/or docsearch to disk, consider pickle
     embeddings = OpenAIEmbeddings()
