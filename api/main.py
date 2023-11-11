@@ -11,7 +11,7 @@ from langchain.prompts import PromptTemplate
 from langchain.text_splitter import CharacterTextSplitter
 from langchain.vectorstores.chroma import Chroma
 from starlette.middleware.cors import CORSMiddleware
-
+from langchain.schema import Document
 from api_models.models import Query, Answer, InformationSource
 
 load_dotenv()
@@ -31,18 +31,21 @@ sources = [
     InformationSource(url="https://www.wikipedia.org", title="State of The Union")
 ]
 
+def get_text_chunks_langchain(text):
+    text_splitter = CharacterTextSplitter(chunk_size=500, chunk_overlap=100)
+    docs = [Document(page_content=x) for x in text_splitter.split_text(text)]
+    return docs
 
 @app.post("/query")
 async def query(query: Query):
     print(f"Q: {query.question}")
-    loader = TextLoader("../data/state_of_the_union_full.txt", encoding="utf-8")
-    documents = loader.load()
-    text_splitter = CharacterTextSplitter(chunk_size=1000, chunk_overlap=0)
-    texts = text_splitter.split_documents(documents)
+    #loader = TextLoader("../data/state_of_the_union_full.txt", encoding="utf-8")
+    documents = get_text_chunks_langchain("aaaaaaaaaaaaaaaaaaaa")
+
 
     # TODO: serialize the embeddings and/or docsearch to disk, consider pickle
     embeddings = OpenAIEmbeddings()
-    docsearch = Chroma.from_documents(texts, embeddings)
+    docsearch = Chroma.from_documents(documents, embeddings)
 
     prompt_template = """Answer in one sentence.
 
