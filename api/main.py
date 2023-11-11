@@ -20,8 +20,6 @@ app.add_middleware(
 )
 
 sources = []
-e
-
 
 @app.post("/query")
 async def query(query: Query):
