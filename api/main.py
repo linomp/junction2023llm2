@@ -37,10 +37,10 @@ sources = [
 
 
 def mock_url_source_raw_content(url=None) -> str:
-    if url is None:
+    try:
+        return read_file(url)
+    except:
         return read_file(URL_MOCK_FILE_PATH)
-
-    return read_file(url)
 
 
 def read_file(path: str) -> str:
