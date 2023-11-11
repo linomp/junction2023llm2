@@ -5,7 +5,7 @@ from langchain.schema import Document
 from langchain.text_splitter import CharacterTextSplitter
 from langchain.vectorstores.chroma import Chroma
 
-from api.api_models.models import InformationSource, CoreModelAnswer, Answer, Query
+from api_models.models import InformationSource, CoreModelAnswer, Answer, Query
 
 URL_MOCK_FILE_PATH = 'data/file1.txt'
 

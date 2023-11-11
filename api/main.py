@@ -5,8 +5,8 @@ from dotenv import load_dotenv
 from fastapi import FastAPI
 from starlette.middleware.cors import CORSMiddleware
 
-from api.utils import get_mocked_answer, get_answer
 from api_models.models import Query, InformationSource, Answer
+from utils import get_mocked_answer, get_answer
 
 load_dotenv()
 
