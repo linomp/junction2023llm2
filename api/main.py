@@ -1,11 +1,26 @@
 import uvicorn
 from fastapi import FastAPI
+from starlette.middleware.cors import CORSMiddleware
 
 from api.models import Query, Answer, InformationSource
 
 app = FastAPI()
 
+origins = [
+    "http://localhost.tiangolo.com",
+    "https://localhost.tiangolo.com",
+    "http://localhost",
+    "http://localhost:8080",
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 sources = []
+e
 
 
 @app.post("/query")
@@ -25,5 +40,5 @@ async def getSources() -> list[InformationSource]:
     return sources
 
 
-if __name__ == "main":
+if __name__ == "__main__":
     uvicorn.run(app, host="0.0.0.0", port=8000)
