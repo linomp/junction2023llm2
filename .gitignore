@@ -4,3 +4,5 @@ venv
 models
 *.xml
 .env
+__pycache__
+.DS_Store
