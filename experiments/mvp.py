@@ -1,3 +1,4 @@
+from dotenv import load_dotenv
 from langchain.chains import RetrievalQA
 from langchain.document_loaders import TextLoader
 from langchain.embeddings import OpenAIEmbeddings
@@ -9,6 +10,8 @@ from langchain.vectorstores.chroma import Chroma
 # Settings for locally hosted OpenAI-compatible models
 # os.environ["OPENAI_API_KEY"] = "KEY_DOESNT_MATTER_FOR_LOCALHOST"
 # os.environ["OPENAI_API_BASE"] = "http://localhost:8080"
+
+load_dotenv()
 
 loader = TextLoader("data/state_of_the_union_full.txt", encoding="utf-8")
 documents = loader.load()
