@@ -6,7 +6,7 @@ from fastapi import FastAPI
 from starlette.middleware.cors import CORSMiddleware
 
 from api_models.models import Query, InformationSource, Answer
-from utils import get_mocked_answer, get_answer
+from utils import get_mocked_answer, get_answer, init_embeddings
 
 load_dotenv()
 
@@ -22,7 +22,13 @@ app.add_middleware(
 
 sources = [
     InformationSource(url="data/reforms.txt", title="yle.fi - EU carbon market reform impacts Finnish steel industry"),
+    InformationSource(url="data/digitalization.txt",
+                      title="ScienceDirect- Digitalisation trends in the mining industry"),
+    InformationSource(url="data/sustainability.txt",
+                      title="Springer - Impact of minerals policy on sustainable development of mining sector – a comparative assessment of selected EU countries"),
 ]
+
+chroma = init_embeddings(sources)
 
 
 @app.post("/query")
@@ -31,7 +37,7 @@ async def query(query: Query):
     if os.environ.get("ENV", None) == "fe_dev":
         return get_mocked_answer(query)
 
-    core_model_answer = get_answer(sources, query)
+    core_model_answer = get_answer(sources, query, chroma)
 
     print(f"A: {core_model_answer.answer}")
     print(f"Sources: {core_model_answer.sources}")

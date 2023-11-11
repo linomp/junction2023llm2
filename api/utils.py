@@ -54,7 +54,8 @@ def get_mocked_answer(query: Query):
                   ])
 
 
-def get_answer(sources: list[InformationSource], query: Query) -> CoreModelAnswer:
+def init_embeddings(sources: list[InformationSource]) -> Chroma:
+    print("Initializing embeddings...")
     documents = []
     mapped_sources = get_mapped_sources(sources)
     for source in mapped_sources:
@@ -65,10 +66,27 @@ def get_answer(sources: list[InformationSource], query: Query) -> CoreModelAnswe
     text_splitter = CharacterTextSplitter(chunk_size=1000, chunk_overlap=0)
     texts = text_splitter.split_documents(documents)
 
-    llm = OpenAI(temperature=0, model_name='text-davinci-003')
-
     embeddings = OpenAIEmbeddings()
     docsearch = Chroma.from_documents(texts, embeddings)
+    return Chroma.from_documents(texts, embeddings)
+
+
+def get_answer(sources: list[InformationSource], query: Query, docsearch: Chroma = None) -> CoreModelAnswer:
+    if docsearch is None:
+        documents = []
+        mapped_sources = get_mapped_sources(sources)
+        for source in mapped_sources:
+            docs = get_text_chunks_langchain(source.raw_content)
+            docs = list(map(lambda d: Document(page_content=d.page_content, metadata={"source": source.title}), docs))
+            documents.extend(docs)
+
+        text_splitter = CharacterTextSplitter(chunk_size=1000, chunk_overlap=0)
+        texts = text_splitter.split_documents(documents)
+
+        embeddings = OpenAIEmbeddings()
+        docsearch = Chroma.from_documents(texts, embeddings)
+
+    llm = OpenAI(temperature=0, model_name='text-davinci-003')
 
     qa = RetrievalQAWithSourcesChain.from_chain_type(llm=llm, retriever=docsearch.as_retriever(),
                                                      chain_type="stuff")
