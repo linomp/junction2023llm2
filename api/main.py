@@ -5,10 +5,10 @@ import uvicorn
 from dotenv import load_dotenv
 from fastapi import FastAPI
 from langchain.chains import RetrievalQA
-from langchain.document_loaders import TextLoader
 from langchain.embeddings import OpenAIEmbeddings
 from langchain.llms.openai import OpenAI
 from langchain.prompts import PromptTemplate
+from langchain.schema import Document
 from langchain.text_splitter import CharacterTextSplitter
 from langchain.vectorstores.chroma import Chroma
 from starlette.middleware.cors import CORSMiddleware
@@ -29,6 +29,10 @@ app.add_middleware(
 
 sources = []
 
+def get_text_chunks_langchain(text):
+    text_splitter = CharacterTextSplitter(chunk_size=500, chunk_overlap=100)
+    docs = [Document(page_content=x) for x in text_splitter.split_text(text)]
+    return docs
 
 @app.post("/query")
 async def query(query: Query):
@@ -45,14 +49,13 @@ async def query(query: Query):
                                             raw_content="America is moving. Moving forward. And we can't stop now.")
                       ])
 
-    loader = TextLoader("data/state_of_the_union_full.txt", encoding="utf-8")
-    documents = loader.load()
-    text_splitter = CharacterTextSplitter(chunk_size=1000, chunk_overlap=0)
-    texts = text_splitter.split_documents(documents)
+    #loader = TextLoader("../data/state_of_the_union_full.txt", encoding="utf-8")
+    documents = get_text_chunks_langchain("aaaaaaaaaaaaaaaaaaaa")
+
 
     # TODO: serialize the embeddings and/or docsearch to disk, consider pickle
     embeddings = OpenAIEmbeddings()
-    docsearch = Chroma.from_documents(texts, embeddings)
+    docsearch = Chroma.from_documents(documents, embeddings)
 
     prompt_template = """Answer in one sentence.
 
@@ -70,6 +73,7 @@ async def query(query: Query):
                                      chain_type_kwargs=chain_type_kwargs)
 
     res = qa.run(query.question)
+    print(res)
 
     return Answer(answer=res, confidence=random.random(), sources=sources)
 
