@@ -2,11 +2,11 @@
 
 # Meet the team
 
-**Steven Exposito🇮🇹:** Head of Data and AI  
-**Erald Keshi🇦🇱** UI/UX Revolutionary Disrupter  
-**Martin Põhjakivi🇪🇪** Estonian Food and Beverage Import/Export Domain Expert  
-**Lino Mediavilla Ponce🇪🇨** Head of Indoor Logistics    
-**Sergi Martinez Rodriguez🇪🇸** Chairman of the Board
+**Steven Exposito🇮🇹🤌** Head of Data and AI  
+**Erald Keshi🇦🇱🦅** UI/UX Revolutionary Disrupter  
+**Martin Põhjakivi🇪🇪🍄* Estonian Food and Beverage Import/Export Domain Expert  
+**Lino Mediavilla Ponce🇪🇨🍌* Head of Indoor Logistics    
+**Sergi Martinez Rodriguez🇪🇸😴* Chairman of the Board
 
 ## Run the backend
 
