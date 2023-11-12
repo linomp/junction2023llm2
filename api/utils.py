@@ -1,6 +1,6 @@
 from langchain.chains import RetrievalQAWithSourcesChain
+from langchain.chat_models import ChatOpenAI
 from langchain.embeddings import OpenAIEmbeddings
-from langchain.llms.openai import OpenAI
 from langchain.schema import Document
 from langchain.text_splitter import CharacterTextSplitter
 from langchain.vectorstores.chroma import Chroma
@@ -86,7 +86,7 @@ def get_answer(sources: list[InformationSource], query: Query, docsearch: Chroma
         embeddings = OpenAIEmbeddings()
         docsearch = Chroma.from_documents(texts, embeddings)
 
-    llm = OpenAI(temperature=0, model_name='text-davinci-003')
+    llm = ChatOpenAI(temperature=0, model_name='gpt-4-1106-preview')
 
     qa = RetrievalQAWithSourcesChain.from_chain_type(llm=llm, retriever=docsearch.as_retriever(),
                                                      chain_type="stuff")
