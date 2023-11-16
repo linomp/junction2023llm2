@@ -6,3 +6,5 @@ models
 .env
 __pycache__
 .DS_Store
+linux_venv
+db
