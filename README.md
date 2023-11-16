@@ -1,6 +1,9 @@
-# Junction2023 LLm project
+# Swarm-assisted conversational vendor data aggregator
 
-# Meet the team
+## Demo
+[Watch the demo video](https://youtu.be/TRBFcSanQ_c)
+
+## Meet the team
 
 **Steven Esposito🇮🇹🤌** Head of Data, AI and media.    
 **Erald Keshi🇦🇱🦅** UI/UX Revolutionary Disrupter.    
