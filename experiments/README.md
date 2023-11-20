@@ -2,18 +2,18 @@
 
 Here we summarize what experiments we performed and what we learned from them.
 
-## [mvp](./mvp)
+## [mvp](https://github.com/linomp/swarmagan-junction2023/blob/main/experiments/mvp.py)
 
 ### TL;DR
 
 It demonstrates how to use the OpenAI API and LangChain to create embeddings from a set of
 files, make questions and get the names of the specific files where the LLM found the answers.
 
-## [mvp-local-llama](./mvp-local-llama)
+## [mvp-local-llama](https://github.com/linomp/swarmagan-junction2023/blob/main/experiments/mvp-local-llama.py)
 
 // todo @Martin
 
-## [mvp-localai](./mvp-localai)
+## [mvp-localai](https://github.com/linomp/swarmagan-junction2023/blob/main/experiments/mvp-localai.py)
 
 ### TL;DR
 
@@ -56,7 +56,7 @@ API: `Chroma`, `OpenAIEmbeddings` and `ChatOpenAI`.
       completion: gpt4all-completion
     ```
 
-1. Download the models:
+1. Download the models and put them in the same folder as the .yaml files:
     - For chat: [ggml-gpt4all-j.bin](https://gpt4all.io/models/ggml-gpt4all-j.bin)
     - For
       embeddings: [ggml-model-q4_0.bin](https://huggingface.co/mudler/all-MiniLM-L6-v2/resolve/main/ggml-model-q4_0.bin)
