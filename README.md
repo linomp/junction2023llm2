@@ -14,10 +14,9 @@
 **Sergi Martinez Rodriguez🇪🇸😴** Chairman of the Board.    
 
 
-## Prototype Architecture
+## Overall Architecture
 
 ![junction2023_project drawio](https://github.com/linomp/swarmagan-junction2023/assets/40581019/e1448154-4d44-4da3-a1a3-f74e18bce693)
-
 
 ## Run the backend
 
