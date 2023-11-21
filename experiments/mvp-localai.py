@@ -37,10 +37,8 @@ def create_store():
 
     # Embed and store the texts
     # Supplying a persist_directory will store the embeddings on disk
-    persist_directory = EMBEDDINGS_PERSIST_DIR
-
     embedding = OpenAIEmbeddings(model=EMBEDDINGS_MODEL, openai_api_base=OPENAI_API_BASE)
-    vectordb = Chroma.from_documents(documents=texts, embedding=embedding, persist_directory=persist_directory)
+    vectordb = Chroma.from_documents(documents=texts, embedding=embedding, persist_directory=EMBEDDINGS_PERSIST_DIR)
 
     vectordb.persist()
 
@@ -48,11 +46,10 @@ def create_store():
 def test_query_with_retrieval():
     # Load and process the text
     embedding = OpenAIEmbeddings(model=EMBEDDINGS_MODEL, openai_api_base=OPENAI_API_BASE)
-    persist_directory = EMBEDDINGS_PERSIST_DIR
 
     # Now we can load the persisted database from disk, and use it as normal.
     llm = ChatOpenAI(temperature=0, model_name=CHAT_MODEL, openai_api_base=OPENAI_API_BASE)
-    vectordb = Chroma(persist_directory=persist_directory, embedding_function=embedding)
+    vectordb = Chroma(persist_directory=EMBEDDINGS_PERSIST_DIR, embedding_function=embedding)
     retriever = VectorStoreRetriever(vectorstore=vectordb)
     qa = RetrievalQA.from_llm(llm=llm, retriever=retriever)
 
