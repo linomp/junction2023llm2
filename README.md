@@ -3,6 +3,8 @@
 ## Demo
 [Watch the demo video](https://youtu.be/TRBFcSanQ_c)
 
+[Read about our experiments](https://github.com/linomp/swarmagan-junction2023/tree/main/experiments)
+
 ## Meet the team
 
 **Steven Esposito🇮🇹🤌** Head of Data, AI and media.    
