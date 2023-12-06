@@ -67,7 +67,6 @@ def init_embeddings(sources: list[InformationSource]) -> Chroma:
     texts = text_splitter.split_documents(documents)
 
     embeddings = OpenAIEmbeddings()
-    docsearch = Chroma.from_documents(texts, embeddings)
     return Chroma.from_documents(texts, embeddings)
 
 
