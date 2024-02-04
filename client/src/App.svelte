@@ -48,7 +48,7 @@
     responseData = null; // Clear previous response data
     try {
       console.log("com va", textInput);
-      const response = await fetch("http://localhost:8001/query", {
+      const response = await fetch("http://localhost:8000/query", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
